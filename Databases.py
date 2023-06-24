@@ -34,3 +34,11 @@ class Thong_ke(Base):
     QR_active:Mapped[int] = mapped_column(nullable=False)
     def __repr__(self):
         return f"ID: {self.id} QR created: {self.QR_created} QR scanned: {self.QR_scanned} QR active: {self.QR_active}"
+class User(Base):
+    __tablename__ = "users"
+    id:Mapped[int] = mapped_column(primary_key=True)
+    username:Mapped[str] = mapped_column(nullable=False)
+    password:Mapped[str] = mapped_column(nullable=False)
+    point:Mapped[int] = mapped_column(nullable=False)
+    def __repr__(self):
+        return f"id: {id} username: {self.username} password: {self.password} point: {self.point}"
