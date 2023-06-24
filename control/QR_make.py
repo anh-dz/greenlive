@@ -27,7 +27,7 @@ def qr_link_make():
 # qr_make() ghép link chính của web và link đuôi, và tạo ra qr xuất ra đặt tên là tham số name
 def qr_make(link, name):
     global web_main_link,session
-    qr_img = qrcode.make(web_main_link+"qr"+link, version = 11)
+    qr_img = qrcode.make(web_main_link+link, version = 11)
     qr_img.save("QR/" + name)
     QR_db_linkpoint_add(QR_db_max_id, link)
     qr_created(session, 1)
@@ -81,7 +81,3 @@ def QR_db_linkpoint_check():
     min_time = 1#60*60*24
     statement = select(Links_point).where(Links_point.start <= time.time() - min_time)
     return session.scalars(statement)
-QR_db_connect()
-QR_db_max_id_find()
-link = qr_link_make()
-qr_make(link, link[1::]+".png")
