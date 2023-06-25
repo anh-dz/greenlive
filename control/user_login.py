@@ -18,6 +18,8 @@ def run()
             raise
         return { id: user.id, point: user.point }
 
+    app.run()
+
         
         
 
