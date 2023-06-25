@@ -1,5 +1,6 @@
 from flask import Flask
 from view import *
+from control import *
 
 viewer = Flask(__name__, template_folder="view/templates", static_folder="view/static")
 

@@ -1,6 +1,20 @@
-{% extends "base.html" %}
+{%extends "base.html" %}
+{%block hetcuu %}style.css{%endblock%}
 {% block title %} LOG IN {%endblock%}
 <!-- {% block css %}login.css{%endblock%} -->
+
+{%block nutHeader%}
+            <li class="nut-dang-nhap">
+                <a href="login">
+                    <button class=”myButton2”>ĐĂNG NHẬP</button>
+                </a>
+            </li>
+            <li class="nut-dang-ki">
+                <a href="register">
+                    <button class=”myButton”>ĐĂNG KÍ</button>
+                </a>
+            </li>
+{%endblock%}
 
 {% block container %}
     <div class="container">
@@ -12,11 +26,13 @@
                             <h1><b style="color: #00764C;">ĐĂNG NHẬP</b></h1>
                         </div>
                     </div>
+                </div>
+                    <form method="post">
                     <div class="input-group mb-3">
-                        <input type="text" id="email-filed" class="form-control form-control-lg bg-light fs-6" placeholder="Email">
+                        <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email" name="email" id="email">
                     </div>
                     <div class="input-group mb-1">
-                        <input type="password" id="password-filed" class="form-control form-control-lg bg-light fs-6" placeholder="Mật khẩu">
+                        <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Mật khẩu" name="password" id="password">
                     </div>
                     <div class="input-group mb-5 d-flex justify-content-between">
                         <div class="form-check">
@@ -28,9 +44,9 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <button class="btn btn-lg btn-primary w-100 fs-6" id="login-btn" style="background-color: #00764C; border: 0px;">Đăng nhập</button>
-                        <script type="text/javascript" src="login.js"></script>
+                        <button type="submit" class="btn btn-lg btn-primary w-100 fs-6" style="background-color: #00764C; border: 0px;">Đăng nhập</button>
                     </div>
+                    </form>
                     <div class="row">
                         <small style="color: #00764C;"> Chưa có tài khoản? <a href="register" style="color: #00764C;"><b style="text-decoration: underline;">Đăng kí</b></a></small>
                     </div>

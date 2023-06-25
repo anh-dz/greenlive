@@ -19,11 +19,3 @@ def run()
         return { id: user.id, point: user.point }
 
     app.run()
-
-        
-        
-
-        
-
-        
-        
