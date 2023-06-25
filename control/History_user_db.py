@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from Databases import History_user, User, Seller, Buyer
 from sqlalchemy import select
 from sqlalchemy.orm import Session
@@ -36,16 +35,3 @@ class History_user_mn():
             self.history_user_max_db = 1
         else:
             self.history_user_max_db += 1
-mng = History_user_mn(Session(engine))
-result = mng.history_user_scan(2)
-for key in result:
-    print(key,result[key])
-=======
-from Databases import History_user_mn, User, Seller, Buyer
-from sqlalchemy import select
-from sqlalchemy.orm import Session
-from connect import engine
-class History_user_mn():
-    pass
-#test join naooo
->>>>>>> 31214a3bc26fe888fd3acafeb5d466ee82a3a743
