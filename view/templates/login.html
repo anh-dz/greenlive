@@ -1,4 +1,4 @@
-{%extends "base.html" %}
+{% extends "base.html" %}
 {% block title %} LOG IN {%endblock%}
 <!-- {% block css %}login.css{%endblock%} -->
 
@@ -13,10 +13,10 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email">
+                        <input type="text" id="email-filed" class="form-control form-control-lg bg-light fs-6" placeholder="Email">
                     </div>
                     <div class="input-group mb-1">
-                        <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Mật khẩu">
+                        <input type="password" id="password-filed" class="form-control form-control-lg bg-light fs-6" placeholder="Mật khẩu">
                     </div>
                     <div class="input-group mb-5 d-flex justify-content-between">
                         <div class="form-check">
@@ -28,7 +28,8 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <button class="btn btn-lg btn-primary w-100 fs-6" style="background-color: #00764C; border: 0px;">Đăng nhập</button>
+                        <button class="btn btn-lg btn-primary w-100 fs-6" id="login-btn" style="background-color: #00764C; border: 0px;">Đăng nhập</button>
+                        <script type="text/javascript" src="login.js"></script>
                     </div>
                     <div class="row">
                         <small style="color: #00764C;"> Chưa có tài khoản? <a href="register" style="color: #00764C;"><b style="text-decoration: underline;">Đăng kí</b></a></small>
