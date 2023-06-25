@@ -6,23 +6,11 @@ from typing import List
 class Base(DeclarativeBase):
     pass
 
-class Seller(Base):
-    __tablename__ = "sellers"
-    id:Mapped[int] = mapped_column(primary_key=True)
-    username:Mapped[str] = mapped_column(nullable=False)
-    password:Mapped[str] = mapped_column(nullable=False)
-    qr_made:Mapped[int] = mapped_column(nullable=False)  
-    links_points:Mapped[List["Links_point"]] = relationship(back_populates = 'seller')
-    def __repr__(self):
-        return f"ID: {self.id} Seller's username: {self.username} Seller's password: {self.password} QR_made: {self.qr_made}"   
-
 class Links_point(Base):
     __tablename__ = "links_point"
     id:Mapped[int] = mapped_column(primary_key=True)
     address:Mapped[str] = mapped_column(nullable=False)
     start:Mapped[int] = mapped_column(nullable=False)
-    seller_id:Mapped[int] = mapped_column(ForeignKey('sellers.id'))
-    seller:Mapped["Seller"] = relationship(back_populates = 'links_points')
     def __repr__(self): 
         return f"ID: {self.id} Address: {self.address} Start_time: {self.start}"
 
@@ -40,6 +28,30 @@ class User(Base):
     id:Mapped[int] = mapped_column(primary_key=True)
     username:Mapped[str] = mapped_column(nullable=False)
     password:Mapped[str] = mapped_column(nullable=False)
-    point:Mapped[int] = mapped_column(nullable=False)
+    buyer:Mapped["Buyer"] = relationship(back_populates = "user")
+    seller:Mapped["Seller"] = relationship(back_populates = "user")
+    history:Mapped["History_user"] = relationship(back_populates="user")
     def __repr__(self):
-        return f"id: {id} username: {self.username} password: {self.password} point: {self.point}"
+        return f"id: {id} username: {self.username} password: {self.password}"
+    
+class Buyer(Base):
+    __tablename__ = "buyers"
+    id:Mapped[int] = mapped_column(primary_key=True)
+    user_id:Mapped[int] = mapped_column(ForeignKey("users.id"))
+    point_gained:Mapped[int] = mapped_column(nullable=False)
+    user:Mapped["User"] = relationship(back_populates = "buyer")
+
+class Seller(Base):
+    __tablename__ = "sellers"
+    id:Mapped[int] = mapped_column(primary_key=True)
+    user_id:Mapped[int] = mapped_column(ForeignKey("users.id"))
+    qr_made:Mapped[int] = mapped_column(nullable=False)
+    user:Mapped["User"] = relationship(back_populates = "seller")
+
+class History_user(Base):
+    __tablename__ = "history_user"
+    id:Mapped[int] = mapped_column(primary_key=True)
+    point_gained:Mapped[int] = mapped_column(nullable=False)
+    time:Mapped[str] = mapped_column(nullable=False)
+    user_id:Mapped[int] = mapped_column(ForeignKey("users.id"))
+    user:Mapped["User"] = relationship(back_populates="history")
