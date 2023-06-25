@@ -16,7 +16,7 @@ def run()
         user = manager.User_db_get_user(flask.request.json.name, flask.request.json.password) 
         if user is None:
             raise
-        
+        return { id: user.id, point: user.point }
 
         
         

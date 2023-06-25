@@ -1,5 +1,8 @@
+from Databases import Links_point
 from sqlalchemy.orm import Session
+from sqlalchemy import select
 from connect import engine
+import time
 session = Session(bind = engine) 
 #add vao trong db
 '''

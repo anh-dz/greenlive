@@ -9,18 +9,23 @@ web_main_link = "localhost:5000/"
 session = Session(bind=engine)
 #Do a query searching for link 
 def QR_query(link):
-    return session.scalar(select(Links_point).where(Links_point.address == link))
+    statement = select(Links_point).where(Links_point.address == link)
+    result = session.scalar(statement)
+    return result
 #Checking if this link is inside of database
 def QR_link_check(link):
-    return QR_query(link) is not None
+    result = QR_query(link)
+    return result is not None
 #delete link after done
 def QR_link_remove(link):
-    session.delete(QR_query(link))
+    result = QR_query(link)
+    session.delete(result)
     session.commit()
 web = Flask(__name__)
 @web.route("/qr/<name>/")
-def func(name: str):
-    link = f"{web_main_link}qr/{name}"
+def func(name):
+    global web_main_link
+    link = web_main_link + f"qr/{name}"
     if QR_link_check(link):
         QR_link_remove(link)
         qr_scanned(session, 1)
