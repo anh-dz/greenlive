@@ -19,8 +19,9 @@ class Seller_db_manage:
         self.session.commit()
     def Seller_db_add_qrmade(self, name, num):
         seller:Seller = self.session.query(Seller).filter_by(username = name).first()
-        seller.qr_made += num
-        self.session.commit()
+        if seller is not None:
+            seller.qr_made += num
+            self.session.commit()
     def Seller_db_max_find(self):
         self.Seller_db_max = self.session.scalar(select(Seller.id).order_by(-1*Seller.id))
         if self.Seller_db_max is None:

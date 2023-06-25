@@ -8,11 +8,12 @@ class User_db_manage:
         self.session:Session = session
         #self.User_db_max = None
         self.User_db_max_find()
-    def User_db_add(self, name, pwrd):
+    def User_db_add(self, name, pwrd, type):
         new_user = User(
             id = self.User_db_max,
             username = name,
             password = pwrd,
+            user_type = type
         )
         self.User_db_max += 1
         self.session.add_all([new_user])
