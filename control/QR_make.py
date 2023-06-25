@@ -5,9 +5,9 @@ import time
 import base64
 from sqlalchemy.orm import Session
 from sqlalchemy import select
-from Databases import Links_point, Seller, Thong_ke
+from Databases import Links_point
 from connect import engine
-from Thong_ke_Db import qr_created, qr_scanned, qr_expired, thong_so_details
+from Thong_ke_Db import qr_created, qr_expired
 global session, QR_db_max_id
 web_main_link = "localhost:5000/"
 #tạo phần chuỗi sau của link VD: /1231023. Dùng để gắn vào chuỗi link chính của web
