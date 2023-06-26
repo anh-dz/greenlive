@@ -2,7 +2,6 @@ from Databases import Buyer
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 from connect import engine
-import typing
 class Buyer_db_manage:
     def __init__(self, session):
         self.session:Session = session

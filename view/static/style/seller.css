@@ -85,19 +85,6 @@ header .nut-tkct a button{
   margin-right: 20px;
 }
 
-.table tbody tr td .doi a button{
-  background-color: red;
-  width: 50px;
-  height: 30px;
-  border: none;
-  border-radius: 10px;
-}
-
-.table tbody tr td .doi a button b{
-  color: white;
-  font-size: 15px;
-}
-
 header .menu-icon .navicon:before,
 header .menu-icon .navicon:after {
     background: #333;
@@ -130,6 +117,8 @@ header .menu-icon {
   position: relative;
   user-select: none;
 }
+
+
 
 header .menu-icon .navicon {
   background: #333;
@@ -174,36 +163,13 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
 
-h5 b .input-group .doi a button{
-    border: 0px;
-    width: 75px;
-    height: 45px;
-    border-radius: 10px;
-    background-color: red;
-    float: right;   
-    margin-top:-10px;
-}
 
-h5 b .input-group .doi a button b{
-    font-size: 25px;
-    color: white;
-}   
-
-h5 b .input-group input{
-    border: 0px;
-    margin-top: -10px;
-}
- 
-h5 i b u{
-    margin-left: 30px;
-    margin-top: 10px;
-}
 
 /* responsive */
 @media screen and (min-width: 1000px) {
-    header li {
-        float: left;
-    }
+  header li {
+      float: left;
+  }
   header .menu {
       clear: none;
       float: right;
@@ -253,6 +219,16 @@ h5 i b u{
   color: #6aa040;
 }
 
+.don-hang h5 { 
+    margin-left: 30px;
+}   
+
+h4 {
+  color:#6aa040;
+  text-align: center;
+  font-size: 35px;
+}
+
 footer .bg{
   width:100%;
   height: 170px;
@@ -266,7 +242,6 @@ footer .bg{
   text-align:center;
   font-size: 10px;
 }
-
 
 .CD ul a { 
   margin-left: 160px;
@@ -293,6 +268,7 @@ footer .bg{
   margin-top: 50x;
   font-size: 18px;
 }
+
 .SM h1 b{
   color: #527C88;
   font-size: 20px;
@@ -318,7 +294,6 @@ footer .bg{
 .row .col-12 .carousel .carousel-inner .carousel-item .row .col-md-4 .card .card-body button:hover{
     background-color: #00764C;
     color: white;
-    border: 0px;
 }
 
 .row .col-12 .carousel .carousel-inner .carousel-item .row .col-md-4 .card img{
@@ -326,4 +301,74 @@ footer .bg{
     height: 300px;
 }
 
+/* ! popup */
+.rows{
+  width: 101%;
+}
+.text .fc{
+  letter-spacing: 3px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 45px;
+  position: inline;
+  margin-top: 220px;
+  padding-left: 210px;
+}
+input[type="text"],
+input[type="password"]{
+  width: 240px;
+  height: 30px;
+  outline: none;
+  border: 0.5px solid #222;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  font-size: 16px;
+  padding-left: 10px;
+}
+.button-login{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 40px;
+  padding-right: 40px;
+  color: #bbb;
+  text-decoration: none;
+  border-radius: 10px;
+  background: #00764C;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+.button-login:hover{
+  box-shadow: 5px 5px 10px #00764C;
+  color: #fff;
+}
+img{
+  margin-left: 550px;
+  margin-top: -295px;
+}
+.modal-title{
+  margin-left: 140px;
+  font-size: 45px;
+  letter-spacing: 2px;
+  font-family: 'Teko', sans-serif;
+}
+.modal-body{
+  margin-left: 120px;
+}
+.btn{
+  margin-top: 10px;
+  width: 240px;
+}
+.foot{
+  margin-bottom: 20px;
+}
+.new-acc{
+  text-decoration: none;
+  position: relative;
+  font-size: 16px;
+  color: gray;
+  top: 20px;
+}
+.new-acc:hover{
+  color: #ff0000;
+}
 

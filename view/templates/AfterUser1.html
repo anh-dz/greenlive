@@ -5,8 +5,8 @@
 {%block nutHeader%}
             <i class="fa-solid fa-bell"></i>
             <li class="nut-tkct">
-                <a href="#">
-                    <button class=”myButton”>Đổi điểm</button>
+                <a href="afteruser2">
+                    <button class=”myButton” >Đổi điểm</button>
                 </a>
             </li>
 {%endblock%}
@@ -26,7 +26,7 @@
 
         <!-- ! thống kê đổi điểm -->
         <h2>
-            👉 <div class="EMERALD">Emerald</div> tích luỹ hiện tại: <span id = "sodiem"></span> điểm
+            👉 <div class="EMERALD">Emerald</div> tích luỹ hiện tại: 1000 điểm
         <br> <br>
             👉 Thống kê đổi <div class="diem">Emerald</div>
         </h2>
@@ -156,30 +156,5 @@
         </table>
     </div>
 
-    <BR><BR><BR>
-
-        <script>
-
-            function getRandomNumber() {
-    
-                url = "/datapoint";
-    
-                axios.get(url)
-                .then(function(response) {
-    
-                    // The data will all be returned as a JSON object
-                    // We can access the data by using the data property of the response object
-    
-                    document.getElementById('sodiem').innerHTML = response.data.so_diem;
-                })
-                .catch(function(error) {
-                    console.log(error);
-                });
-            }
-    
-            // This calls the function getRandomNumber() every 2 seconds
-            // var intervalID = window.setInterval(getRandomNumber, 2000);
-    
-        </script>
-
+    <BR><BR><BR>    
 {%endblock%}
