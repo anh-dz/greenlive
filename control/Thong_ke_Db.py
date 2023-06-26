@@ -21,8 +21,4 @@ class Thong_ke_db_mn():
         self.session.commit()
     def thong_so_details(self):
         thong_so = self.session.query(Thong_ke).filter_by(id = 1).first()
-<<<<<<< HEAD
         return thong_so
-=======
-        return thong_so
->>>>>>> 31214a3bc26fe888fd3acafeb5d466ee82a3a743

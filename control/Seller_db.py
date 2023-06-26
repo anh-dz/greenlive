@@ -15,8 +15,8 @@ class Seller_db_manage:
         self.Seller_db_max +=  1
         self.session.add_all([new_seller])
         self.session.commit()
-    def Seller_db_add_qrmade(self, name, num):
-        seller:Seller = self.session.query(Seller).filter_by(username = name).first()
+    def Seller_db_add_qrmade(self, target_id, num):
+        seller:Seller = self.session.query(Seller).filter_by(user_id = target_id).first()
         if seller is not None:
             seller.qr_made += num
             self.session.commit()
