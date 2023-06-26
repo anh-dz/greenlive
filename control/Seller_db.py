@@ -28,3 +28,5 @@ class Seller_db_manage:
             self.Seller_db_max = 1
         else:
             self.Seller_db_max += 1
+    def Seller_db_point(self, target_id):
+        return self.session.query(Seller).filter(Seller.id == target_id).first().point_gained

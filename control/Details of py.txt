@@ -13,9 +13,13 @@
     *Databases_create.py
 - create all relation databases that from the Databases.py
 
+    *Trade_history_user_db.py
+- add a record of the buyer buying something with points
+- scan and return a dict which contains buying records of a user
+
     *History_user_db.py
 - add a record of the buyer gainning the point
-- scan and return a dict which contains records of a user
+- scan and return a dict which contains gainning records of a user
 
     *Notify_db.py
 - add a notification to a user. A notification contains a Text, a time string
