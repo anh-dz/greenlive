@@ -1,9 +1,9 @@
 from flask import Flask
-from .home import homepage
-from .reg import register
-from .log import login
-from .au1 import afteruser1
-from .au2 import afteruser2
+from .home import *
+from .reg import *
+from .log import *
+from .au1 import  *
+from .au2 import *
 
 def create_app(viewer):
     viewer.register_blueprint(homepage, url_prefix="/")
