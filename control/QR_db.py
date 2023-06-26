@@ -36,5 +36,3 @@ class QR_db_mn():
         min_time = 1#60*60*24
         statement = select(Links_point).where(Links_point.start <= time.time() - min_time)
         return self.session.scalars(statement)
-mng = QR_db_mn(Session(engine))
-mng.QR_db_linkpoint_remove(mng.QR_db_linkpoint_check())

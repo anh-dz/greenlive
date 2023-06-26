@@ -1,6 +1,20 @@
 {%extends "base.html" %}
 {% block title %} GREENLIVE {%endblock%}
+{%block hetcuu %}style.css{%endblock%}
 {% block css %}homepage.css{%endblock%}
+
+{%block nutHeader%}
+            <li class="nut-dang-nhap">
+                <a href="login">
+                    <button class=”myButton2”>ĐĂNG NHẬP</button>
+                </a>
+            </li>
+            <li class="nut-dang-ki">
+                <a href="register">
+                    <button class=”myButton”>ĐĂNG KÍ</button>
+                </a>
+            </li>
+{%endblock%}
 
 {% block container %}
 <div>
@@ -19,7 +33,7 @@
             Sứ mệnh <br>
         </h3>
         <div class="rec">
-            <img src="img/Picture1.png" alt="">
+            <img src="static/img/Picture1.png" alt="">
             <div class="contents">
                 "Lorem ipsum dolor sit amet, consectetur 
                 adipiscing elit, sed do eiusmod tempor 
