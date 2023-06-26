@@ -8,9 +8,10 @@ class History_user_mn():
     def __init__(self, session):
         self.session:Session = session
         self.history_user_max_db_find()
-    def history_user_add(self, point_gained, user_id):
+    def history_user_add(self, point_gained, bill_code, user_id):
         new_history = History_user(
         id = self.history_user_max_db,
+        bill_code = bill_code,
         point_gained = point_gained,
         time = time.asctime(time.gmtime(time.time())),
         user_id = user_id
@@ -25,7 +26,7 @@ class History_user_mn():
             result = self.session.query(History_user, User).filter(History_user.user_id == User.id, History_user.user_id == target_id).all()
             for his in result:
                 result_dict["UserName"].append(his.User.username)
-                result_dict["BillCode"].append("Sample")
+                result_dict["BillCode"].append(his.History_user.bill_code)
                 result_dict["Time"].append(his.History_user.time)
                 result_dict["Emerald"].append(his.History_user.point_gained)
         return result_dict
@@ -35,3 +36,6 @@ class History_user_mn():
             self.history_user_max_db = 1
         else:
             self.history_user_max_db += 1
+# mng = History_user_mn(Session(engine))
+# print(mng.history_user_scan(1))
+# mng.history_user_add(500, "Con vit", 1)

@@ -4,6 +4,7 @@ from sqlalchemy import select
 from connect import engine
 from Thong_ke_db import Thong_ke_db_mn
 from QR_db import QR_db_mn
+from Seller_db import Seller_db_manage
 class QR_maker():
     def __init__(self, session, save_folder, web_link_qr) -> None:
         self.session:Session = session
@@ -11,6 +12,7 @@ class QR_maker():
         self.web_link_qr = web_link_qr
         self.QR_db_mnger = QR_db_mn(session)
         self.Thong_ke_mnger = Thong_ke_db_mn(session)
+        self.Seller_db_mnger = Seller_db_manage(session)
     def QR_link_make(self):
         ma_hoa_don = "A1BXDD" #ma hoa don sample
         so_random = str(random.randint(10, 99))
@@ -30,3 +32,6 @@ class QR_maker():
         self.QR_make(link_on_web, name)
         self.QR_db_mnger.QR_db_add(link_on_web,seller_id)
         self.Thong_ke_mnger.qr_created(1)
+        self.Seller_db_mnger.Seller_db_add_qrmade(seller_id,1)
+# maker = QR_maker(Session(engine), "control/QR/", "localhost:5000/qr/")
+# maker.QR_full_make(seller_id = 1)

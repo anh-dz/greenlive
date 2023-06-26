@@ -5,7 +5,6 @@ from connect import engine
 class User_db_manage:
     def __init__(self, session):
         self.session:Session = session
-        #self.User_db_max = None
         self.User_db_max_find()
     def User_db_add(self, name, pwrd, type):
         new_user = User(

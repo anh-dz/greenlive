@@ -50,6 +50,7 @@ class History_user(Base):
     __tablename__ = "history_user"
     id:Mapped[int] = mapped_column(primary_key=True)
     point_gained:Mapped[int] = mapped_column(nullable=False)
+    bill_code:Mapped[str] = mapped_column(nullable=False)
     time:Mapped[str] = mapped_column(nullable=False)
     user_id:Mapped[int] = mapped_column(nullable=False)
     def __repr__(self) -> str:
@@ -59,4 +60,12 @@ class Notifi(Base):
     id:Mapped[int] = mapped_column(primary_key=True)
     time:Mapped[str] = mapped_column(nullable=False)
     text:Mapped[str] = mapped_column(nullable=False)
+    user_id:Mapped[int] = mapped_column(nullable=False)
+class Trade_history_user(Base):
+    __tablename__ = "trade_history_user"
+    id:Mapped[int] = mapped_column(primary_key=True)
+    point_paid:Mapped[int] = mapped_column(nullable=False)
+    item_name:Mapped[str] = mapped_column(nullable=False)
+    item_id:Mapped[int] = mapped_column(nullable=False)
+    time:Mapped[str] = mapped_column(nullable=False)
     user_id:Mapped[int] = mapped_column(nullable=False)

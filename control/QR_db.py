@@ -3,10 +3,12 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 from connect import engine
 import time
+from Thong_ke_db import Thong_ke_db_mn
 class QR_db_mn():
     def __init__(self, session) -> None:
         self.session:Session = session
         self.QR_db_max_find()
+        self.Thong_ke_db_mnger = Thong_ke_db_mn(Session(engine))
     def QR_db_add(self, link, seller_id):
         new_QR = Links_point(
             id = self.QR_db_max,
@@ -31,6 +33,7 @@ class QR_db_mn():
                 self.session.delete(link)
         self.session.commit()
         self.QR_db_max_find()
+        self.Thong_ke_db_mnger.qr_expired(a)
     def QR_db_linkpoint_check(self):
         global session
         min_time = 1#60*60*24
