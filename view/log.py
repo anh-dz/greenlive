@@ -8,5 +8,8 @@ def log():
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
-        logme(email, password)
+        user = logme(email, password)
+        resp = flask.jsonify(user)
+        resp.set_cookie("username", user.username)
+        return resp
     return render_template("login.html")

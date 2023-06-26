@@ -1,5 +1,5 @@
-from User_db import User_db_manage
-from connect import engine
+from .User_db import User_db_manage
+from .connect import engine
 import sqlalchemy
 
 def logme(email, password):
@@ -10,5 +10,6 @@ def logme(email, password):
 
     user = manager.User_db_get_user(email, password) 
     if user is None:
-        raise
+        print("Khong the dang nhap duoc")
+        return
     return user
