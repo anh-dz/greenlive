@@ -1,7 +1,4 @@
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
-from sqlalchemy.orm import relationship
-from sqlalchemy import ForeignKey, Column, Integer
-from typing import List
 
 class Base(DeclarativeBase):
     pass
