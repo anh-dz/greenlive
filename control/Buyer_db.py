@@ -13,9 +13,9 @@ class Buyer_db_manage:
             user_id = user_id,
             point_gained = 0
         )
-        self.Buyer_db_max +=  1
         self.session.add_all([new_Buyer])
         self.session.commit()
+        self.Buyer_db_max += 1
     def Buyer_db_add_point(self, id, num):
         buyer:Buyer = self.session.query(Buyer).filter_by(user_id = id).first()
         if buyer is not None:
@@ -27,5 +27,5 @@ class Buyer_db_manage:
             self.Buyer_db_max = 1
         else:
             self.Buyer_db_max += 1
-mng = Buyer_db_manage(Session(engine))
-mng.Buyer_db_add_point(2, 1010011)
+    def Buyer_db_point(self, target_id):
+        return self.session.query(Buyer).filter(Buyer.id == target_id).first().point_gained
