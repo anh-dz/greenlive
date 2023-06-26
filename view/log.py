@@ -1,6 +1,5 @@
 from flask import Blueprint, render_template, request, jsonify
 from control import *
-from control.a_log_in import logme
 
 login = Blueprint('login', __name__)
 
