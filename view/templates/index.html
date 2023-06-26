@@ -1,0 +1,53 @@
+{%extends "base.html" %}
+{% block title %} GREENLIVE {%endblock%}
+{%block hetcuu %}style.css{%endblock%}
+{% block css %}homepage.css{%endblock%}
+
+{%block nutHeader%}
+            <li class="nut-dang-nhap">
+                <a href="login">
+                    <button class=”myButton2”>ĐĂNG NHẬP</button>
+                </a>
+            </li>
+            <li class="nut-dang-ki">
+                <a href="register">
+                    <button class=”myButton”>ĐĂNG KÍ</button>
+                </a>
+            </li>
+{%endblock%}
+
+{% block container %}
+<div>
+    <div class="background-gioithieu">
+        <div class="gioithieu">
+            <h1>
+                GIỚI THIỆU VỀ GREENLIVE
+            </h1>
+            <h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate molestias iste reprehenderit dolor doloremque ducimus rem, praesentium delectus dicta atque repellat veritatis libero, quisquam inventore magni maxime tempore. Temporibus, architecto?
+            </h3>
+        </div>
+    </div>
+    <article>
+        <h3>
+            Sứ mệnh <br>
+        </h3>
+        <div class="rec">
+            <img src="static/img/Picture1.png" alt="">
+            <div class="contents">
+                "Lorem ipsum dolor sit amet, consectetur 
+                adipiscing elit, sed do eiusmod tempor 
+                incididunt ut labore et dolore magna 
+                aliqua. Ut enim ad minim veniam, quis 
+                nostrud exercitation ullamco laboris nisi 
+                ut aliquip ex ea commodo consequat. 
+            </div>
+        </div>
+    </article>  
+    <br>
+    <div class="CD">
+        <ul><a href="#">Cộng đồng</a></ul>
+    </div>
+    <br><br><br><br>
+</div>
+{% endblock %}
