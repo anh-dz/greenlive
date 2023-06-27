@@ -1,7 +1,7 @@
-from Databases import Seller
+from .Databases import Seller
 from sqlalchemy import select
 from sqlalchemy.orm import Session
-from connect import engine
+from .connect import engine
 import typing
 class Seller_db_manage:
     def __init__(self, session):

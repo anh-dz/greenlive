@@ -1,7 +1,7 @@
-from Databases import Notifi, User
+from .Databases import Notifi, User
 from sqlalchemy import select
 from sqlalchemy.orm import Session
-from connect import engine
+from .connect import engine
 import time
 import typing
 class Notifi_db_mn():

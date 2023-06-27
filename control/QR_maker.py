@@ -1,10 +1,10 @@
 import time, base64, random, qrcode
 from sqlalchemy.orm import Session
 from sqlalchemy import select
-from connect import engine
-from Thong_ke_db import Thong_ke_db_mn
-from QR_db import QR_db_mn
-from Seller_db import Seller_db_manage
+from .connect import engine
+from .Thong_ke_db import Thong_ke_db_mn
+from .QR_db import QR_db_mn
+from .Seller_db import Seller_db_manage
 class QR_maker():
     def __init__(self, session, save_folder, web_link_qr) -> None:
         self.session:Session = session

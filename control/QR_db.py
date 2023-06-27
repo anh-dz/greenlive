@@ -1,7 +1,7 @@
-from Databases import Links_point
+from .Databases import Links_point
 from sqlalchemy import select
 from sqlalchemy.orm import Session
-from connect import engine
+from .connect import engine
 import time
 from Thong_ke_db import Thong_ke_db_mn
 class QR_db_mn():

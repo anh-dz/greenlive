@@ -1,7 +1,7 @@
-from Databases import History_user, User, Seller, Buyer
+from .Databases import History_user, User, Seller, Buyer
 from sqlalchemy import select
 from sqlalchemy.orm import Session
-from connect import engine
+from .connect import engine
 import time
 import typing
 class History_user_mn():

@@ -1,5 +1,5 @@
-from Databases import Base, Links_point, Seller
-from connect import engine
+from .Databases import Base, Links_point, Seller
+from .connect import engine
 import logging, sqlalchemy
 logging.basicConfig()
 logging.getLogger('sqlalchemy.engine').setLevel(logging.DEBUG)

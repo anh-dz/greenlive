@@ -1,7 +1,7 @@
 from .Databases import User
 from sqlalchemy import select
-from Buyer_db import Buyer_db_manage
-from Seller_db import Seller_db_manage
+from .Buyer_db import Buyer_db_manage
+from .Seller_db import Seller_db_manage
 from sqlalchemy.orm import Session
 class User_db_manage:
     def __init__(self, session):

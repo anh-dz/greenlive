@@ -1,7 +1,7 @@
-from Databases import Trade_history_user, User
+from .Databases import Trade_history_user, User
 from sqlalchemy import select
 from sqlalchemy.orm import Session
-from connect import engine
+from .connect import engine
 import time
 import typing
 class Trade_history_user_mn():
