@@ -1,5 +1,5 @@
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
-
+from flask_login import UserMixin
 class Base(DeclarativeBase):
     pass
 
@@ -21,7 +21,7 @@ class Thong_ke(Base):
     def __repr__(self):
         return f"ID: {self.id} QR created: {self.QR_created} QR scanned: {self.QR_scanned} QR active: {self.QR_active}"
     
-class User(Base):
+class User(Base, UserMixin):
     __tablename__ = "users"
     id:Mapped[int] = mapped_column(primary_key=True)
     username:Mapped[str] = mapped_column(nullable=False)
