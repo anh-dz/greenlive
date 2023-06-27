@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 from .connect import engine
 import time
 import typing
+
 class History_user_mn():
     def __init__(self, session):
         self.session:Session = session
@@ -36,6 +37,5 @@ class History_user_mn():
             self.history_user_max_db = 1
         else:
             self.history_user_max_db += 1
-# mng = History_user_mn(Session(engine))
-# print(mng.history_user_scan(1))
-# mng.history_user_add(500, "Con vit", 1)
+
+# mng.history_user_add(500, "Con vit", 2)
