@@ -37,6 +37,5 @@ class Trade_history_user_mn():
             self.trade_history_user_max_db = 1
         else:
             self.trade_history_user_max_db += 1
-# mng = Trade_history_user_mn(Session(engine))
-# print(mng.trade_history_user_scan(2))
+
 # mng.trade_history_user_add(-500, "Voucher", 1, 1)
