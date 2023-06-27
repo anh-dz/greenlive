@@ -1,0 +1,285 @@
+{%extends "base.html" %}
+{% block title %} Seller {%endblock%}
+{% block css %}seller.css{%endblock%}
+
+{%block nutHeader%}
+            <i class="fa-solid fa-bell"></i>
+            <li class="nut-tkct">
+                <a href="afteruser1">
+                    <button class=”myButton”>Đăng xuất</button>
+                </a>
+            </li>
+{%endblock%}
+
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+{% block container %}
+<br><br><br><br><br>
+<div class="container">
+    <h1>
+        <b>Chào mừng USER!
+        <br><br>
+        </b>
+    </h1>
+    <h3><b>👉 Đơn hàng sử dụng túi nilon</b></h3>
+
+    <br>
+
+        <div class="rows">
+            <div class="col-md-5 text">
+                <span type="button" class="button-Tao-Don-Hang" data-toggle="modal" data-target="#staticBackdrop" >
+                    TẠO ĐƠN HÀNG
+                </span>
+
+                <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">
+                            <b style="color:#00764C; font-size: 30px; ">TẠO ĐƠN HÀNG</b>
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post">
+                            <div>
+                                <input type="text" placeholder="Tên đơn hàng" name="tendonhang" id="tendonhang" required/>
+                                <div class="note" style="display: inline; color: red;">*</div>
+                            </div> 
+
+                            <div>
+                                <input type="text" placeholder="Mã đơn hàng" name="madonhang" id="madonhang" required/>
+                                <div class="note" style="display: inline; color: red;">*</div>
+                            </div> 
+
+                            <div>
+                                <input type="text" placeholder="Nhập điểm" name="nhapdiem" id="nhapdiem" required />
+                                <div class="note" style="display: inline; color: red;">*</div>
+                            </div> 
+
+                            <div>
+                                <input type="text" placeholder="Ghi chú" name="ghichu" id="ghichu" required />
+                            </div>
+
+                            <div>
+                                <button class="btn " type="submit" style="background:#00764C; color:white">
+                                    TẠO
+                                </button>
+                            </div>
+
+                            <br>
+
+                            <button style="border:none; float:right;"> 
+                                <i class="fa-solid fa-floppy-disk fa-2x" style="color:#00764C"></i>
+                            </button>
+
+                        </form>
+                    </div>
+                    </div>
+                    </div><br>
+                </div>
+            </div>
+        </div>
+
+        <div class="rows">
+            <div class="col-md-7 text">
+                <span type="button" class="button-Tao-Ma-Giam-Gia" data-toggle="modal" data-target="#staticBackdroper" >
+                    TẠO MÃ GIẢM GIÁ
+                </span>
+
+                <div class="modal fade" id="staticBackdroper" data-backdrop="static" data-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title" id="staticBackdroperLabel">
+                            <b style="color:#00764C; text-align: center; font-size: 30px;">TẠO MÃ GIẢM GIÁ</b>
+                        </h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post">
+                            <div>
+                                <input type="text" placeholder="Mã" name="ma" id="ma" required/>
+                                <div class="note" style="display: inline; color: red;">*</div>
+                            </div>
+
+                            <div>
+                                <input type="text" placeholder="Số lượng mã" name="soluongma" id="soluongma" required />
+                                <div class="note" style="display: inline; color: red;">*</div>
+                            </div>
+
+                            <div>
+                                <input type="text" placeholder="Phần trăm giảm giá" name="phantramgiamgia" id="phantramgiamgia" required />
+                                <div class="note" style="display: inline; color: red;">*</div>
+                            </div>
+
+                            <div>
+                                <input type="text" placeholder="Ghi chú" name="ghichu" id="ghichu" required />
+                            </div>
+
+
+                            <div>
+                                <button class="btn " type="submit" style="background:#00764C; color:white">
+                                    TẠO
+                                </button>
+                            </div>
+
+                            <br>
+
+                            <button style="border:none; float:right;"> 
+                                <i class="fa-solid fa-floppy-disk fa-2x" style="color:#00764C"></i>
+                            </button>
+
+                        </form>
+                    </div>
+                    </div>
+                    </div><br>
+                </div>
+            </div>
+        </div>
+
+        <div class="rows">
+            <div class="col-md-11 text">
+                <span type="button" class="button-Tao-Vat-Pham" data-toggle="modal" data-target="#staticBackdroper2" >
+                    TẠO VẬT PHẨM
+                </span>
+
+                <div class="modal fade" id="staticBackdroper2" data-backdrop="static" data-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title" id="staticBackdropLabel">
+                            <b style="color:#00764C; text-align: center; font-size: 30px;">TẠO VẬT PHẨM</b>
+                        </h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post">
+                            <div>
+                                <input type="text" placeholder="Tên vật phẩm" name="tenvatpham" id="tenvatpham" required/>
+                                <div class="note" style="display: inline; color: red;">*</div>
+                            </div>
+
+                            <div>
+                                <input type="text" placeholder="Hình ảnh" name="hinhanh" id="hinhanh" required />
+                                <div class="note" style="display: inline; color: red;">*</div>
+                            </div>
+
+                            <div>
+                                <input type="text" placeholder="Mô tả" name="mota" id="mota" required />
+                                <div class="note" style="display: inline; color: red;">*</div>
+                            </div>
+
+                            <div>
+                                <input type="text" placeholder="Số Emerald" name="emerald" id="emerald"required />
+                                <div class="note" style="display: inline; color: red;">*</div>
+                            </div>
+
+                            <div>
+                                <input type="text" placeholder="Số lượng" name="soluong" id="soluong" required />
+                                <div class="note" style="display: inline; color: red;">*</div>
+                            </div>
+
+                            <div>
+                                <input type="text" placeholder="Ghi chú" required />
+                            </div>
+
+                            <div>
+                                <button class="btn " type="submit" style="background:#00764C; color:white">
+                                    TẠO
+                                </button>
+                            </div>
+
+                            <br>
+
+                            <button style="border:none; float:right;"> 
+                                <i class="fa-solid fa-floppy-disk fa-2x" style="color:#00764C"></i>
+                            </button>
+
+                        </form>
+                    </div>
+                    </div>
+                    </div><br>
+                </div>
+            </div>
+        </div>
+
+        
+    <br><br>
+
+    <h3><b>Thống kê</b></h3>
+
+    <br>
+
+    <div class="don-hang">
+        <h5>Số đơn hàng đã tạo: <span>50</span></h5>
+    </div>        
+
+    <br>
+
+    <div class="SBS-Table">
+        <table class="table" style="width: 48%; float: left;">
+            <thead style="background-color:#FFC0CB; text-align: center;">
+                <tr>
+                    <th scope="col"><h3><b>MÃ ĐƠN HÀNG</b></h3></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Số mã đã tạo</th>
+                    <td><span>10</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">Số mã đã quét</th>
+                    <td><span>20</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">Số mã còn lại</th>
+                    <td><span>5</span></td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <table class="table" style="width:48%; float: right;">
+            <thead style="background-color:#FFC0CB; text-align: center;">
+                <tr>
+                    <th scope="col"><h3><b>VẬT PHẨM</b></h3></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Số vật phẩm đã tạo</th>
+                    <td><span>10</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">Số vật phẩm đã đổi</th>
+                    <td><span>20</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">Số vật phẩm còn lại</th>
+                    <td><span>5</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h4><i>"Sống xanh"</i></h4>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<br><br>
+{% endblock %}

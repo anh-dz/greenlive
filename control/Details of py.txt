@@ -1,0 +1,50 @@
+    ****Cautions****
+    - Time.time() return the GMT+0
+    - Function find expired QR_link: the time that a qr link takes to be expired is now 1 second
+    
+    *Buyer_db.py
+- add buyer to db 
+- add point to a buyer
+- view point of a buyer
+    
+    *connect.py
+- connect db store at a specified link
+
+    *Databases_create.py
+- create all relation databases that from the Databases.py
+
+    *Trade_history_user_db.py
+- add a record of the buyer buying something with points
+- scan and return a dict which contains buying records of a user
+
+    *History_user_db.py
+- add a record of the buyer gainning the point
+- scan and return a dict which contains gainning records of a user
+
+    *Notify_db.py
+- add a notification to a user. A notification contains a Text, a time string
+- scan and return all notification of a user
+
+    *QR_db.py
+- add a QR link to the database
+- remove a QR link from the database
+- check for every QR links that are expired
+
+    *QR_maker.py
+- make a QR and store in a folder
+
+    *Seller.db
+- add seller to the db
+- change the number of the seller's QR which are scanned
+
+    *Thong_ke_db.py
+- change the number of qr were made
+- change the number of qr were scanned
+- change the number of qr being active right now
+
+    *User_db.py
+- add user to the database (user have the user_type, which show user is seller or buyer)
+
+    *linking files
+- QR_maker: add to the database the link, change the thong ke database, change the seller qr's made
+- QR_db: remove expired links -> c

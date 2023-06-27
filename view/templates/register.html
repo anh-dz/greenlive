@@ -1,0 +1,66 @@
+{%extends "base.html" %}
+{%block hetcuu %}style.css{%endblock%}
+{% block title %} SIGN UP {%endblock%}
+<!-- {% block css %}register.css{%endblock%} -->
+
+{%block nutHeader%}
+            <li class="nut-dang-nhap">
+                <a href="login">
+                    <button class=”myButton2”>ĐĂNG NHẬP</button>
+                </a>
+            </li>
+            <li class="nut-dang-ki">
+                <a href="register">
+                    <button class=”myButton”>ĐĂNG KÍ</button>
+                </a>
+            </li>
+{%endblock%}
+
+{% block container %}
+    <div class="container">
+        <!----------------------- Main Container -------------------------->
+        <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <!----------------------- Logiqn Container -------------------------->
+        <!-------------------- ------ Right Box ---------------------------->
+            <div class="col-md-6 right-box">
+                <div class="row align-items-center">
+                    <div class="header-text mb-4">
+                        <div style="text-align: center;">
+                            <br><br><br><br>
+                            <h1><b style="color: #00764C;">ĐĂNG KÍ</b></h1>
+                        </div>
+                    </div>
+                </div>
+                    <form method="post">
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Họ và Tên" name="name" id="name">
+                    </div>
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Email" name="email" id="email">
+                    </div>
+                    <div class="input-group mb-2">
+                        <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Mật khẩu" name="password" id="password">
+                    </div>
+                    <div class="input-group mb-2">
+                        <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Nhập lại mật khẩu" name="password_check" id="password_check">
+                    </div>
+                    <div class="input-group mb-1">
+                        <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Mã giới thiệu" name="magioithieu" id="magioithieu">
+                    </div>
+                    <div class="input-group mb-5 d-flex justify-content-between">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="formCheck">
+                            <label for="formCheck" class="form-check-label text-secondary"><small>Tôi không phải là robot</small></label>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <button type="submit" class="btn btn-lg btn-primary w-100 fs-6" style="background-color: #00764C; border: 0px;" >Đăng kí</button>
+                    </div>
+                    </form>
+                    <div class="row">
+                        <small style="color: #00764C;"> Đã có tài khoản? <a href="login" style="color: #00764C;"><b style="text-decoration: underline;">Đăng nhập</b></a></small>
+                    <br><br><br><br><br><br></div>
+                </div> 
+            </div>
+        </div>
+{% endblock %}
