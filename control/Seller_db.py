@@ -7,11 +7,10 @@ class Seller_db_manage:
     def __init__(self, session):
         self.session:Session = session
         self.Seller_db_max_find()
-    def Seller_db_add(self, name, pwrd):
+    def Seller_db_add(self, user_id):
         new_seller = Seller(
             id = self.Seller_db_max,
-            username = name,
-            password = pwrd,
+            user_id = user_id,
             qr_made = 0
         )
         self.Seller_db_max +=  1
