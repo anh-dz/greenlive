@@ -10,10 +10,10 @@ afteruser1 = Blueprint('afteruser1', __name__)
 #     {'vatdung': 'Mã giảm giá bách hoá Trâu Quỳ', 'thoigian': '8h 30/5/2023', 'emerald': '-150'}
 # ]
 
-lich_su_tich_emerald = [
-    {'magiamgia': 'CJKJAKJCLKEOIW81951235', 'thoigian': '16h 28/3/2023', 'emerald': '+100'},
-    {'magiamgia': 'CJKAJCKJKDJKFJ819891235', 'thoigian': '8h 30/4/2023', 'emerald': '+150'}
-]
+# lich_su_tich_emerald = [
+#     {'magiamgia': 'CJKJAKJCLKEOIW81951235', 'thoigian': '16h 28/3/2023', 'emerald': '+100'},
+#     {'magiamgia': 'CJKAJCKJKDJKFJ819891235', 'thoigian': '8h 30/4/2023', 'emerald': '+150'}
+# ]
 
 nhacnho = [
     {'mondocanmua': 'Thịt chó', 'thoigian': '16h 28/3/2023', 'diadiem': 'AEON Mall LB'},

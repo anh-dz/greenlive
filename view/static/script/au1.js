@@ -44,15 +44,23 @@ function deleteRow(button) {
 var intervalID = window.setInterval(updateDiem, 2000);
 updateDiem();
 
-// functionaddRow() {
-//   var tableRow = document.getElementById("nhacnho");
-//   var row = tableRow.insertRow(0);
-//   var cell1 = row.insertCell(0);
-//   var cell2 = row.insertCell(1);
-//   var cell3 = row.insertCell(2);
-//    cell1.innerHTML = "Cell of New Row";
-//    cell2.innerHTML = "Cell of New Row";
-//    cell3.innerHTML = "Cell of New Row";
-// }
+function addRow() {
+  var table = document.getElementById("table");
+  var newRow = table.insertRow(table.rows.length);
+  
+  var usernameCell = newRow.insertCell(0);
+  var vatdungCell = newRow.insertCell(1);
+  var thoigianCell = newRow.insertCell(2);
+  var buttonCell = newRow.insertCell(3);
+  buttonCell.innerHTML = '<button class="btn text-success my-2 table-delete" onclick="deleteRow(this)"><i class="fa-solid fa-trash"></i></button>';
+
+  usernameCell.contentEditable = true;
+  vatdungCell.contentEditable = true;
+  thoigianCell.contentEditable = true;
+  
+  usernameCell.innerHTML = "Bạn cần mua gì?";
+  vatdungCell.innerHTML = "Bạn mua vào thời gian nào?";
+  thoigianCell.innerHTML = "Bạn mua ở cửa hàng nào?"
+}
 
 // https://linuxhint.com/add-row-to-html-table-using-javascript/#:~:text=Use%20the%20following%20syntax%20for,table%20or%20at%20the%20start.

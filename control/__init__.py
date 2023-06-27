@@ -9,3 +9,4 @@ from .historyReadData import *
 
 so_diem = get_id()
 thong_ke_doi_emerald = tkdoidiem
+lich_su_tich_emerald = tktichdiem

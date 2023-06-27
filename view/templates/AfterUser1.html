@@ -18,7 +18,7 @@
 
         <h1>
             <b>
-                Chào mừng <span id = "user">USER</span>!
+                Chào mừng User!
             </b>
         </h1>
 
@@ -87,7 +87,7 @@
         <!-- ! nhắc nhở mua hàng -->
         <div class="nhac-nho">
             <h2>👉 Nhắc nhở mua hàng
-                <button class="btn text-success my-2 table-add ">
+                <button class="btn text-success my-2 table-add " onclick="addRow()">
                     <i class="fa-solid fa-plus"></i>
                 </button>
                 <button class="btn text-success my-2 table-safe ">
@@ -97,13 +97,13 @@
         </div>
 
         <!-- ! Table 3 -->
-        <table class="table" id="nhacnho">
+        <table class="table" id="table">
             <thead>
                 <tr style="background-color: #FFC0CB;">
                     <th scope="col" ><h3><b>MÓN ĐỒ CẦN MUA</b></h3></th>
                     <th scope="col"><h3><b>THỜI GIAN</b></h3></th>
                     <th scope="col" ><h3><b>ĐỊA ĐIỂM</b></h3></th>
-                    <th scope="col" ><h3><b>XÓA</b></h3></th>
+                    <th scope="col"><h3><b>XÓA</b></h3></th>
                 </tr>
             </thead>
             <tbody>
@@ -125,6 +125,5 @@
 
     <BR><BR><BR>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <script src="static/script/au1.js"></script>
 {%endblock%}

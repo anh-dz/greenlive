@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 from .connect import engine
 import time
 import typing
+
 class History_user_mn():
     def __init__(self, session):
         self.session:Session = session
