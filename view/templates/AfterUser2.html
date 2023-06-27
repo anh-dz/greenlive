@@ -14,12 +14,15 @@
 {% block container %}
 <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
 <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="static/script/au1.js"></script>
+
     <br><br><br><br><br>
     <div class="container">
         <h1>
-            <b>Chào mừng USER!
+            <b>Chào mừng <span id = "user">USER</span>!
             <div class="emer" style="float:right; font-size: 25px; ">
-                Số <div class="emerald" style="color:#00764C; display: inline; ">Emerald</div> hiện tại: 1000 điểm
+                Số <div class="emerald" style="color:#00764C; display: inline; ">Emerald</div> hiện tại: <span style="color:#00764C" id = "sodiem"></span>
             </div>
             </b>
         </h1>

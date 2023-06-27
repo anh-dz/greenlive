@@ -338,9 +338,9 @@ h2 .diem{
     float: left;
 }
 
-.nhac-nho button{
+.nhac-nho .button button{
     width: max-content;
-    font-size: 15Spx;
+    font-size: 15px;
     color: #fff;
     transition: 0.5s;
     float: left;

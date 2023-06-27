@@ -26,7 +26,7 @@
 
         <!-- ! thống kê đổi điểm -->
         <h2>
-            👉 <div class="EMERALD">Emerald</div> tích luỹ hiện tại: 1000 điểm
+            👉 <div class="EMERALD">Emerald</div> tích luỹ hiện tại: <span style="color:#00764C" id = "sodiem"></span>
         <br> <br>
             👉 Thống kê đổi <div class="diem">Emerald</div>
         </h2>
@@ -43,21 +43,13 @@
                 </tr>
             </thead>
             <tbody>
+                {% for row in data1%}
                 <tr>
-                    <th scope="row">Mã giảm giá cửa hàng tiện lợi CircleK</th>
-                    <td>16h 28/3/2023</td>
-                    <td>-100</td>
+                    <th scope="row">{{ row['vatdung'] }}</th>
+                    <td>{{ row['thoigian'] }}</td>
+                    <td>{{ row['emerald'] }}</td>
                 </tr>
-                <tr>
-                    <th scope="row">Mã giảm giá bách hoá Trâu Quỳ</th>
-                    <td>8h 30/4/2023</td>
-                    <td>-150</td>
-                </tr>
-                <tr>
-                    <th scope="row">Tăm bông</th>
-                    <td>6h30 1/5/2023</td>
-                    <td>-1200</td>
-                </tr>
+                {% endfor %}
             </tbody>
         </table>
 
@@ -80,21 +72,13 @@
                 </tr>
             </thead>
             <tbody>
+                {% for row in data2%}
                 <tr>
-                    <th scope="row">CJKJAKJCLKEOIW81951235</th>
-                    <td>16h 28/3/2023</td>
-                    <td>+100</td>
+                    <th scope="row">{{ row['magiamgia'] }}</th>
+                    <td>{{ row['thoigian'] }}</td>
+                    <td>{{ row['emerald'] }}</td>
                 </tr>
-                <tr>
-                    <th scope="row">CJKAJCKJKDJKFJ819891235</th>
-                    <td>8h 30/4/2023</td>
-                    <td>+150</td>
-                </tr>
-                <tr>
-                    <th scope="row">CJAkJCK18598219JCKAJCK</th>
-                    <td>6h30 1/5/2023</td>
-                    <td>+ 1200</td>
-                </tr>
+                {% endfor %}
             </tbody>
         </table>
 
@@ -102,17 +86,18 @@
 
         <!-- ! nhắc nhở mua hàng -->
         <div class="nhac-nho">
-            <h2>👉 Nhắc nhở mua hàng</h2>
-            <button class="btn text-success my-2 table-add ">
-                <i class="fa-solid fa-plus"></i>
-            </button>
-            <button class="btn text-success my-2 table-safe ">
-                <i class="fa-regular fa-floppy-disk"></i>
-            </button>
+            <h2>👉 Nhắc nhở mua hàng
+                <button class="btn text-success my-2 table-add " onclick="addRow()">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <button class="btn text-success my-2 table-safe ">
+                    <i class="fa-regular fa-floppy-disk"></i>
+                </button>
+            </h2>
         </div>
 
         <!-- ! Table 3 -->
-        <table class="table">
+        <table class="table" id="table">
             <thead>
                 <tr style="background-color: #FFC0CB;">
                     <th scope="col" ><h3><b>MÓN ĐỒ CẦN MUA</b></h3></th>
@@ -122,39 +107,23 @@
                 </tr>
             </thead>
             <tbody>
+                {% for row in remind_data %}
                 <tr>
-                    <td contenteditable="true"><b>Bút chì, tẩy, gọt</b></td>
-                    <td contenteditable="true">16h 28/3/2023</td>
-                    <td contenteditable="true">AEON MALL LONG BIÊN</td>
+                    <td contenteditable="true"><b>{{ row['mondocanmua'] }}</b></td>
+                    <td contenteditable="true">{{ row['thoigian'] }}</td>
+                    <td contenteditable="true">{{ row['diadiem']}}</td>
                     <td> 
-                        <button class="btn text-success my-2 table-delete ">
+                        <button class="btn text-success my-2 table-delete" onclick="deleteRow(this)">
                             <i class="fa-solid fa-trash"></i>
                         </button>
                     </td>
                 </tr>
-                <tr>
-                    <td contenteditable="true"><b>Bơ, xoài</b></td>
-                    <td contenteditable="true">8h 30/4/2023</td>
-                    <td contenteditable="true">Happy market</td>
-                    <td> 
-                        <button class="btn text-success my-2 table-delete ">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td contenteditable="true"><b>Nước</b></td>
-                    <td contenteditable="true">6h30 1/5/2023</td>
-                    <td contenteditable="true">CircleK</td>
-                    <td> 
-                        <button class="btn text-success my-2 table-delete ">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </td>   
-                </tr>
+                {% endfor %}
             </tbody>
         </table>
     </div>
 
-    <BR><BR><BR>    
+    <BR><BR><BR>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="static/script/au1.js"></script>
 {%endblock%}
