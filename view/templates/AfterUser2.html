@@ -196,28 +196,17 @@
                 </tr>
             </thead>
             <tbody>
+                {% for row in data %}
                 <tr>
-                    <th scope="row"><b>Happy Market</b></th>
-                    <td>30</td>
-                    <td>80%</td>
-                    <td>-150</td>
-                    <td><div class="doi">
-                        <a href="#">
-                            <button class=”myButton2”><b>Đổi</b></button>
-                        </a> 
-                    </div></td>
+                    <td><b>{{ row['cuahang'] }}</b></td>
+                    <td>{{ row['soluong'] }}</td>
+                    <td contenteditable="true">{{ row['giamgia']}}</td>
+                    <td contenteditable="true">{{ row['emerald']}}</td>
+                    <td>
+                            <button class="myButton2" onclick="deleteRow(this)"><b>Đổi</b></button>
+                    </tr>
                 </tr>
-                <tr>
-                    <th scope="row"><b>Happy Market</b></th>
-                    <td>25</td>
-                    <td>10%</td>
-                    <td>-1200</td>
-                    <td><div class="doi">
-                        <a href="#">
-                            <button class=”myButton2”><b>Đổi</b></button>
-                        </a> 
-                    </div></td>
-                </tr>
+                {% endfor %}
             </tbody>
         </table>
 
@@ -324,4 +313,5 @@
         <br><br><br>
 
     </div>
+    <script src="static/script/au1.js"></script>
 {% endblock %}

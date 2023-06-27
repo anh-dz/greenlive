@@ -85,17 +85,14 @@ header .nut-tkct a button{
   margin-right: 20px;
 }
 
-.table tbody tr td .doi a button{
+.table tbody tr td button{
   background-color: red;
+  color: white;
+  font-size: 15px;
   width: 50px;
   height: 30px;
   border: none;
   border-radius: 10px;
-}
-
-.table tbody tr td .doi a button b{
-  color: white;
-  font-size: 15px;
 }
 
 header .menu-icon .navicon:before,
