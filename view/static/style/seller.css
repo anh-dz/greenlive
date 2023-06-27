@@ -303,7 +303,7 @@ footer .bg{
 
 /* ! popup */
 .rows{
-  width: 101%;
+  width: 101%;                   
 }
 .text .fc{
   letter-spacing: 3px;
@@ -325,22 +325,63 @@ input[type="password"]{
   font-size: 16px;
   padding-left: 10px;
 }
-.button-login{
+.button-Tao-Don-Hang{
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 40px;
   padding-right: 40px;
-  color: #bbb;
+  color: #00764C;
+  border: 2px solid #00764C;
   text-decoration: none;
   border-radius: 10px;
-  background: #00764C;
+  background: white;
   margin-left: 30px;
   margin-top: 10px;
 }
-.button-login:hover{
-  box-shadow: 5px 5px 10px #00764C;
+.button-Tao-Don-Hang:hover{
+  background:#00764C;
   color: #fff;
 }
+
+.button-Tao-Ma-Giam-Gia{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 40px;
+  padding-right: 40px;
+  float:right;
+  color: #00764C;
+  border: 2px solid #00764C;
+  text-decoration: none;
+  border-radius: 10px;
+  background: white;
+  margin-left: 30px;
+  margin-top: -45px;
+}
+.button-Tao-Ma-Giam-Gia:hover{
+  background:#00764C;
+  color: #fff;
+}
+
+
+.button-Tao-Vat-Pham{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 40px;
+  padding-right: 40px;
+  color: #00764C;
+  border: 2px solid #00764C;
+  text-decoration: none;
+  border-radius: 10px;
+  background: white;
+  margin-left: 30px;
+  margin-top: -45px;
+  float:right;
+}
+.button-Tao-Vat-Pham:hover{
+  background:#00764C;
+  color: #fff;
+}
+
 img{
   margin-left: 550px;
   margin-top: -295px;
@@ -349,7 +390,7 @@ img{
   margin-left: 140px;
   font-size: 45px;
   letter-spacing: 2px;
-  font-family: 'Teko', sans-serif;
+  font-family: 'Open sans', sans-serif;
 }
 .modal-body{
   margin-left: 120px;

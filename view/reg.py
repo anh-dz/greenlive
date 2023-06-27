@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request
+from flask import *
 from control import *
 
 register = Blueprint('register', __name__)
@@ -11,5 +11,12 @@ def reg():
         password = request.form.get('password')
         password_check = request.form.get('password_check')
         magioithieu = request.form.get('magioithieu')
-        signup(name, email, password, password_check, magioithieu)
+        if password != password_check:
+            flash('Mật khẩu không trùng nhau', category='error')
+        elif len(password)<=7:
+            flash('Mật khẩu quá ngắn', category='error')
+        else:
+            signup(name, email, password, magioithieu)
+            flash('Đăng kí thành công, vui lòng đặng nhập tài khoản', category='success')
+
     return render_template("register.html")
