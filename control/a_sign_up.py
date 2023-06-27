@@ -11,6 +11,6 @@ def signup(name, email, password, password_check, magioithieu):
 
     manager = User_db_manage(session)
 
-    manager.User_db_add(email, password, 1)
+    manager.User_db_add(name, password, 1)
 
     
