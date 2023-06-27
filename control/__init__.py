@@ -6,7 +6,9 @@ from .a_sign_up import *
 from .loginReadData import *
 from .History_user_db import *
 from .historyReadData import *
-
-so_diem = get_id()
-thong_ke_doi_emerald = tkdoidiem
-lich_su_tich_emerald = tktichdiem
+from .check_cookie import *
+#from .Databases_create import *
+# from .QR_maker import *
+# so_diem = get_id()
+# thong_ke_doi_emerald = tkdoidiem
+# lich_su_tich_emerald = tktichdiem

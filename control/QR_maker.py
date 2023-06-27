@@ -25,13 +25,13 @@ class QR_maker():
     def QR_make(self, link, name):
         qr_img = qrcode.make(link, version = 11)
         qr_img.save(name)
-    def QR_full_make(self, seller_id):
+    def QR_full_make(self, seller_id, point):
         link = self.QR_link_make()
         link_on_web = self.web_link_qr + link
         name = self.save_folder + link + ".png"
         self.QR_make(link_on_web, name)
-        self.QR_db_mnger.QR_db_add(link_on_web,seller_id)
+        self.QR_db_mnger.QR_db_add(link_on_web,seller_id, point)
         self.Thong_ke_mnger.qr_created(1)
         self.Seller_db_mnger.Seller_db_add_qrmade(seller_id,1)
 maker = QR_maker(Session(engine), "control/QR/", "localhost:5000/qr/")
-maker.QR_full_make(seller_id = 1)
+maker.QR_full_make(seller_id = 1, point = 100)
