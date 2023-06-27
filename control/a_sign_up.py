@@ -1,2 +1,16 @@
+from .User_db import User_db_manage
+from .connect import engine
+import sqlalchemy
+
 def signup(name, email, password, password_check, magioithieu):
-    print(name, email, password, password_check, magioithieu)
+    if password != password_check:
+        return
+
+    session = sqlalchemy.orm.Session(bind = engine)
+    session.autoflush = True
+
+    manager = User_db_manage(session)
+
+    manager.User_db_add(email, password, 1)
+
+    
