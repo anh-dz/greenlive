@@ -25,6 +25,8 @@ class User_db_manage:
         self.session.commit()
     def User_db_get_user(self, name, pwd):
         return self.session.query(User).filter_by(username = name, password = pwd).first()
+    def User_db_get_user_id(self, user_id):
+        return self.session.query(User).filter_by(id = user_id).first()
     def User_db_max_find(self):
         self.User_db_max = self.session.scalar(select(User.id).order_by(-1*User.id))
         if self.User_db_max is None:
