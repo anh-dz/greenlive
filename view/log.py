@@ -16,8 +16,9 @@ def log():
         if user is None:
             flash('Sai tài khoản hoặc mật khẩu', category='error')
         else:
-            resp = jsonify({ "username": user.username })
+            #resp = jsonify({ "username": user.username })
             user_login(email, password)
+            resp = make_response(redirect('/afteruser1'))
             resp.set_cookie("username", user.username)
             return resp
     return render_template("login.html")

@@ -30,6 +30,20 @@ header li a {
   margin-left: 10px;
 }
 
+header .nut-DX a button{
+  border-radius: 100px;
+  border: 0px;
+  width: 150px;
+  height: 44px;   
+  background-color: #00764C;
+  font-weight: bolder;
+  color: #fff;font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  margin-right: 20px;
+}
+
 header .logo {
   display: block;
   float: left;
@@ -340,11 +354,6 @@ header li a {
   border-right: 1px solid #f4f4f4;
   text-decoration: none;
   margin-left: 10px;
-}
-
-header li a:hover,
-header .menu-btn:hover {
-  background-color: #f4f4f4;  
 }
 
 header .logo {

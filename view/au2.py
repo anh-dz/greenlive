@@ -40,6 +40,9 @@ def au2():
             if so_tien <= Buyer_manager.Buyer_db_point(current_user.id):
                 Buyer_manager.Buyer_db_add_point(current_user.id, -1*so_tien)
                 Trade_manager.trade_history_user_add(-1*so_tien, "Hỗ trợ", 9999999, current_user.id, ma="")
+        elif request.form.get('Logout') == "Logout":
+            logout_user()
+            return redirect('/login')
         else:
             for i in range(1, a + 1):
                 if request.form.get("button" + str(i)) == "Button_doi":

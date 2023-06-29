@@ -9,6 +9,14 @@
                     <button class=”myButton” >Đổi điểm</button>
                 </a>
             </li>
+        </li>
+        <form method="post">
+        <li class="nut-DX">
+            <a href="afteruser1">
+                <button class=”myButton” name = "Logout" value = "Logout">Đăng xuất</button>
+            </a>
+        </li>
+        </form>
 {%endblock%}
 
 {% block container %}
@@ -89,14 +97,12 @@
         <!-- ! nhắc nhở mua hàng -->
         <div class="nhac-nho">
             <h2>👉 Nhắc nhở mua hàng
-                <form method="POST">
-                <button type="submit" value="plus" name="action1" class="btn text-success my-2 table-add " onclick="addRow()">
+                <button type="submit" class="btn text-success my-2 table-add " onclick="addRow()">
                     <i class="fa-solid fa-plus"></i>
                 </button>
-                <button type="submit" value="save" name="action2" class="btn text-success my-2 table-safe ">
+                <button type="submit" class="btn text-success my-2 table-safe ">
                     <i class="fa-regular fa-floppy-disk"></i>
                 </button>
-                </form>
             </h2>
         </div>
 

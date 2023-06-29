@@ -49,6 +49,9 @@ def au1():
             print(1)
         elif  request.form.get('action2') == 'save':
             print(0)
+        elif request.form.get('Logout') == "Logout":
+            logout_user()
+            return redirect('/login')
     return render_template("AfterUser1.html", user = current_user.username, data1 = thong_ke_doi_emerald, data2 = lich_su_tich_emerald, remind_data = nhacnho)
 
 # @afteruser1.route('/add', methods=['POST'])
