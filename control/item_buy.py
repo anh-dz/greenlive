@@ -16,4 +16,4 @@ def buy(user_id, session, item_id):
         return 1
     else:
         return 0
-# buy(1, Session(engine), 1)
+# buy(1, Session(engine), 3)
