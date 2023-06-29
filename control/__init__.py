@@ -16,6 +16,6 @@ from .Note_db import *
 from .Item_db import *
 from .QR_maker import *
 
-so_diem = get_id()
-thong_ke_doi_emerald = tkdoidiem
-lich_su_tich_emerald = tktichdiem
+# so_diem = get_id()
+# thong_ke_doi_emerald = tkdoidiem
+# lich_su_tich_emerald = tktichdiem
