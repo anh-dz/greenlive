@@ -24,21 +24,21 @@ nhacnho = [
 def au1():
     return render_template("AfterUser1.html", user = 'user', data1 = thong_ke_doi_emerald, data2 = lich_su_tich_emerald, remind_data = nhacnho)
 
-@afteruser1.route('/add', methods=['POST'])
-def add():
-    # Get new row data from the form submission
-    vatdung = 'Test'
-    thoigian = 'Test2'
-    emerald = 'Test3'
+# @afteruser1.route('/add', methods=['POST'])
+# def add():
+#     # Get new row data from the form submission
+#     vatdung = 'Test'
+#     thoigian = 'Test2'
+#     emerald = 'Test3'
 
-    # Create a new row dictionary
-    new_row = {'vatdung': vatdung, 'thoigian': thoigian, 'emerald': emerald}
+#     # Create a new row dictionary
+#     new_row = {'vatdung': vatdung, 'thoigian': thoigian, 'emerald': emerald}
 
-    # Add the new row to the data list
-    thong_ke_doi_emerald.append(new_row)
+#     # Add the new row to the data list
+#     thong_ke_doi_emerald.append(new_row)
 
-    # Redirect back to the main page
-    return redirect('/afteruser1')
+#     # Redirect back to the main page
+#     return redirect('/afteruser1')
 
 
 @afteruser1.route('/diem')

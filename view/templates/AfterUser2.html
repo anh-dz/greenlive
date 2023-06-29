@@ -242,71 +242,29 @@
         <i>“Con người không thể sống yêu thương nếu thiếu trái tim”</i>
         <br><br><br><br>
         <h3><b>👉 Thống kê đổi điểm</b></h3>
-        <div class="table1">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col"><h3><b>VẬT DỤNG</b></h3></th>
-                        <th scope="col"><h3><b>THỜI GIAN</b></h3></th>
-                        <th scope="col" style="color: #00764C"><h3><b>EMERALD</b></h3></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Mã giảm giá cửa hàng tiện lợi CircleK</th>
-                        <td>16h 28/3/2023</td>
-                        <td>-100</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Mã giảm giá bách hoá Trâu Quỳ</th>
-                        <td>8h 30/4/2023</td>
-                        <td>-150</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Tăm bông</th>
-                        <td>6h30 1/5/2023</td>
-                        <td>-1200</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
         <br>
-
-        <h3><b>👉 Thống kê đổi điểm</b></h3>
+        <div class="table1">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"><h3><b>VẬT DỤNG</b></h3></th>
+                    <th scope="col"><h3><b>THỜI GIAN</b></h3></th>
+                    <th scope="col" style="color: #00764C"><h3><b>EMERALD</b></h3></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data1%}
+                <tr>
+                    <th scope="row">{{ row['vatdung'] }}</th>
+                    <td>{{ row['thoigian'] }}</td>
+                    <td>{{ row['emerald'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
 
         <br><br>
-
-        <div class="table2">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col"><h3><b>VẬT DỤNG</b></h3></th>
-                        <th scope="col"><h3><b>THỜI GIAN</b></h3></th>
-                        <th scope="col" style="color: #00764C"><h3><b>EMERALD</b></h3></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Mã giảm giá cửa hàng tiện lợi CircleK</th>
-                        <td>16h 28/3/2023</td>
-                        <td>-100</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Mã giảm giá bách hoá Trâu Quỳ</th>
-                        <td>8h 30/4/2023</td>
-                        <td>-150</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Tăm bông</th>
-                        <td>6h30 1/5/2023</td>
-                        <td>-1200</td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
-
-        <br><br>
 
         <h3><b>👉 Mã giới thiệu bạn bè: JICJKDLS</b></h3>
 
