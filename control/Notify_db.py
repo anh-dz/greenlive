@@ -13,7 +13,7 @@ class Notifi_db_mn():
             id = self.notifi_max_db,
             text = text,
             user_id = user_id,
-            time = time.asctime(time.gmtime(time.time()+ 60*60*7))
+            time = time.asctime(time.localtime(time.time()))
         )
         self.session.add(new_noti)
         self.session.commit()
