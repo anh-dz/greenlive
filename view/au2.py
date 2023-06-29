@@ -10,7 +10,7 @@ data = [
 
 @afteruser2.route('/afteruser2')
 def au2():
-    return render_template("AfterUser2.html", data = data)
+    return render_template("AfterUser2.html", user = 'user', data = data)
 
 @afteruser2.route('/diem')
 def api_diem():

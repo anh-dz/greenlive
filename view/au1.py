@@ -22,7 +22,7 @@ nhacnho = [
 
 @afteruser1.route('/afteruser1')
 def au1():
-    return render_template("AfterUser1.html", data1 = thong_ke_doi_emerald, data2 = lich_su_tich_emerald, remind_data = nhacnho)
+    return render_template("AfterUser1.html", user = 'user', data1 = thong_ke_doi_emerald, data2 = lich_su_tich_emerald, remind_data = nhacnho)
 
 @afteruser1.route('/add', methods=['POST'])
 def add():

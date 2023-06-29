@@ -20,7 +20,7 @@
     <br><br><br><br><br>
     <div class="container">
         <h1>
-            <b>Chào mừng <span id = "user">USER</span>!
+            <b>Chào mừng {{ user }}!
             <div class="emer" style="float:right; font-size: 25px; ">
                 Số <div class="emerald" style="color:#00764C; display: inline; ">Emerald</div> hiện tại: <span style="color:#00764C" id = "sodiem"></span>
             </div>
@@ -203,7 +203,7 @@
                     <td contenteditable="true">{{ row['giamgia']}}</td>
                     <td contenteditable="true">{{ row['emerald']}}</td>
                     <td>
-                            <button class="myButton2" onclick="deleteRow(this)"><b>Đổi</b></button>
+                            <button class="myButton2" onclick="deleteRow(this)" value="{{ row.id }}"><b>Đổi</b></button>
                     </tr>
                 </tr>
                 {% endfor %}
