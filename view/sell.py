@@ -10,5 +10,6 @@ def au1():
             madonhang = request.form.get('madonhang')
             nhapdiem = request.form.get('nhapdiem')
         elif  request.form.get('action2') == 'magiamgia':
-            pass # do something else
+            ma = request.form.get('ma')
+            phantrammagiamgia = request.form.get('phantrammagiamgia')
     return render_template("seller.html")

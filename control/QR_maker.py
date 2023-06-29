@@ -34,4 +34,4 @@ class QR_maker():
         self.Thong_ke_mnger.qr_created(1)
         self.Seller_db_mnger.Seller_db_add_qrmade(seller_id,1)
 # maker = QR_maker(Session(engine), "control/QR/", "localhost:5000/qr/")
-# maker.QR_full_make(seller_id = 1, point = 400)
+# maker.QR_full_make(seller_id = 1, point = 400, mdh = 'TEST')
