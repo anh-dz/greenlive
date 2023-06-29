@@ -113,7 +113,7 @@
                     <td contenteditable="true">{{ row['thoigian'] }}</td>
                     <td contenteditable="true">{{ row['diadiem']}}</td>
                     <td> 
-                        <button class="btn text-success my-2 table-delete" onclick="deleteRow(this)">
+                        <button class="btn text-success my-2 table-delete" onclick="deleteRow(this)" value="{{ row.id }}">
                             <i class="fa-solid fa-trash"></i>
                         </button>
                     </td>
