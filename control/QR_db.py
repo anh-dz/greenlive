@@ -3,7 +3,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 from .connect import engine
 import time
-from .Thong_ke_db import Thong_ke_db_mn
+from .Thong_ke_Db import Thong_ke_db_mn
 class QR_db_mn():
     def __init__(self, session) -> None:
         self.session:Session = session
@@ -44,3 +44,5 @@ class QR_db_mn():
         self.session.delete(link)
         self.session.commit()
         self.Thong_ke_db_mnger.qr_scanned()
+# mng = QR_db_mn(Session(engine))
+# mng.QR_db_linkpoint_remove(mng.QR_db_linkpoint_check())

@@ -6,7 +6,10 @@ from .a_sign_up import *
 from .loginReadData import *
 from .History_user_db import *
 from .historyReadData import *
-from .check_cookie import *
+#from .item_buy import *
+#from .QR_maker import *
+#from .check_cookie import *
+from .QR_db import *
 #from .Databases_create import *
 # from .QR_maker import *
 # so_diem = get_id()

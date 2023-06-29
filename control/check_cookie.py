@@ -63,16 +63,16 @@ login_manager = login_manager_create(app, Session(engine))
 # muốn để một trang web cần login required vào thì thêm
 # @login_required
 # vào trước @app.route()
-@app.route('/login')
-def log_in():
-    rs = user_login("katori", "2")
-    return rs
-@app.route('/logout')
-def log_out():
-    user_logout()
-    return redirect('/')
-@app.route('/qr/<name>')
-@login_required
-def hetcuu(name):
-    return qr_link_onweb("localhost:5000/qr/" + name, Session(engine))
-app.run()
+# @app.route('/login')
+# def log_in():
+#     rs = user_login("katori", "2")
+#     return rs
+# @app.route('/logout')
+# def log_out():
+#     user_logout()
+#     return redirect('/')
+# @app.route('/qr/<name>')
+# @login_required
+# def hetcuu(name):
+#     return qr_link_onweb("localhost:5000/qr/" + name, Session(engine))
+# app.run()

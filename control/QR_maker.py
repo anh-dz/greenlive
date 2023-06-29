@@ -2,7 +2,7 @@ import time, base64, random, qrcode
 from sqlalchemy.orm import Session
 from sqlalchemy import select
 from .connect import engine
-from .Thong_ke_db import Thong_ke_db_mn
+from .Thong_ke_Db import Thong_ke_db_mn
 from .QR_db import QR_db_mn
 from .Seller_db import Seller_db_manage
 class QR_maker():
@@ -34,4 +34,4 @@ class QR_maker():
         self.Thong_ke_mnger.qr_created(1)
         self.Seller_db_mnger.Seller_db_add_qrmade(seller_id,1)
 maker = QR_maker(Session(engine), "control/QR/", "localhost:5000/qr/")
-maker.QR_full_make(seller_id = 1, point = 100)
+maker.QR_full_make(seller_id = 1, point = 400)
