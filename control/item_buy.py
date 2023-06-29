@@ -12,7 +12,8 @@ def buy(user_id, session, item_id):
     amount = item.price
     if buyer_manager.Buyer_db_point(user_id) >= amount:
         buyer_manager.Buyer_db_add_point(user_id, -1*amount)
-        Trade_history_user_manager.trade_history_user_add(-1*amount, item.name, item_id, user_id)
+        Trade_history_user_manager.trade_history_user_add(-1*amount, item.name, item_id, user_id, ma = item.code)
+        item_manager.remove_item(item_id)
         return 1
     else:
         return 0

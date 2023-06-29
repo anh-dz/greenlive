@@ -4,9 +4,13 @@ from .connect import engine
 class Item_db_mn():
     def __init__(self, session):
         self.session = session
-    def add_item(self, name, giam, price):
-        item = Item(name=name, giam=giam, price=price)
+    def add_item(self, name, ma, giam, price):
+        item = Item(name=name, code = ma, giam=giam, price=price)
         self.session.add(item)
+        self.session.commit()
+    def remove_item(self, item_id):
+        item = self.session.query(Item).filter(Item.id == item_id).first()
+        self.session.delete(item)
         self.session.commit()
     def get_item(self,item_id):
         return self.session.query(Item).filter(Item.id == item_id).first()

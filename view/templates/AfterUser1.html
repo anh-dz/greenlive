@@ -38,6 +38,7 @@
             <thead>
                 <tr>
                     <th scope="col"><h3><b>VẬT DỤNG</b></h3></th>
+                    <th scope="col"><h3><b>Mã</b></h3></th>
                     <th scope="col"><h3><b>THỜI GIAN</b></h3></th>
                     <th scope="col" style="color: #00764C"><h3><b>EMERALD</b></h3></th>
                 </tr>
@@ -46,6 +47,7 @@
                 {% for row in data1%}
                 <tr>
                     <th scope="row">{{ row['vatdung'] }}</th>
+                    <td>{{ row['ma'] }}</td>
                     <td>{{ row['thoigian'] }}</td>
                     <td>{{ row['emerald'] }}</td>
                 </tr>
@@ -87,12 +89,14 @@
         <!-- ! nhắc nhở mua hàng -->
         <div class="nhac-nho">
             <h2>👉 Nhắc nhở mua hàng
-                <button class="btn text-success my-2 table-add " onclick="addRow()">
+                <form method="POST">
+                <button type="submit" value="plus" name="action1" class="btn text-success my-2 table-add " onclick="addRow()">
                     <i class="fa-solid fa-plus"></i>
                 </button>
-                <button class="btn text-success my-2 table-safe ">
+                <button type="submit" value="save" name="action2" class="btn text-success my-2 table-safe ">
                     <i class="fa-regular fa-floppy-disk"></i>
                 </button>
+                </form>
             </h2>
         </div>
 

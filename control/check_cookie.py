@@ -29,7 +29,7 @@ def user_login(username, password):
     mng = User_db_manage(Session(engine))
     user = mng.User_db_get_user(username, password)
     if user is not None:
-        login_user(user)
+        login_user(user, remember=True)
         return str(1)
     else:
         return str(0)

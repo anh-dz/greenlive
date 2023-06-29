@@ -1,5 +1,6 @@
 from flask import *
 from flask_login import *
+#from .Databases_create import *
 from .User_db import *
 from .Buyer_db import *
 from .a_log_in import *
@@ -9,9 +10,10 @@ from .History_user_db import *
 from .historyReadData import *
 from .item_buy import *
 from .QR_maker import *
-#from .check_cookie import *
+from .check_cookie import *
 from .QR_db import *
-#from .Databases_create import *
+from .Note_db import *
+from .Item_db import *
 from .QR_maker import *
 
 so_diem = get_id()

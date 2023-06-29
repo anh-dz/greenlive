@@ -5,7 +5,7 @@
 {%block nutHeader%}
             <i class="fa-solid fa-bell"></i>
             <li class="nut-tkct">
-                <a href="#">
+                <a href="afteruser1">
                     <button class=”myButton”>Tài khoản của tôi</button>
                 </a>
             </li>
@@ -189,7 +189,7 @@
             <thead>
                 <tr>
                     <th scope="col"><h3><b>CỬA HÀNG</b></h3></th>
-                    <th scope="col"><h3><b>SỐ LƯỢNG</b></h3></th>
+                    <!-- <th scope="col"><h3><b>ID MÃ</b></h3></th> -->
                     <th scope="col"><h3><b>GIẢM GIÁ</b></h3></th>
                     <th scope="col" style="color: #00764C"><h3><b>EMERALD</b></h3></th>
                     <th scope="col"><h3><b style="color: red;">ĐỔI</b></h3></th>
@@ -197,15 +197,17 @@
             </thead>
             <tbody>
                 {% for row in data %}
+                <form method = "post" id = "form{{ loop.index }}">
                 <tr>
-                    <td><b>{{ row['cuahang'] }}</b></td>
-                    <td>{{ row['soluong'] }}</td>
-                    <td contenteditable="true">{{ row['giamgia']}}</td>
-                    <td contenteditable="true">{{ row['emerald']}}</td>
+                    <td><b name = "dt1">{{ row['cuahang'] }}</b></td>
+                    <!-- <td name = "dt2">{{ row['item_id'] }}</td> -->
+                    <td name = "dt3">{{ row['giamgia'] }}</td>
+                    <td name = "dt4">{{ row['emerald'] }}</td>
                     <td>
-                            <button class="myButton2" onclick="deleteRow(this)" value="{{ row.id }}"><b>Đổi</b></button>
+                        <button type = "submit" class="myButton2" name = "button{{ loop.index }}" value="Button_doi" ><b>Đổi</b></button>
                     </tr>
                 </tr>
+                </form>
                 {% endfor %}
             </tbody>
         </table>
@@ -216,6 +218,7 @@
         <br><br>
         <h5>
             <b>
+                <form method = "post">
                 <div class="input-group">
                     <div class="nhap-so">
                         Nhập số
@@ -224,13 +227,14 @@
                         </div>
                     muốn hỗ trợ:  
                     </div>                    
-                    <input type="text" class="form-control form-control-lg bg-light fs-6">
+                    <input type="text" name ="hotroemerald" id = "hotroemerald" class="form-control form-control-lg bg-light fs-6">
                     <div class="doi">
                         <a href="#">
-                            <button class=”myButton2”><b>Đổi</b></button>
+                            <button class=”myButton2” name = "Hotro_doi" value="Hotro_doi"><b>Đổi</b></button>
                         </a> 
                     </div>
                 </div>
+                </form>
             </b>  
             <br><br>
                 <i><b><u>Quy đổi:</u></b></i> <i style="font-size:16px;">1k VND = 100 
@@ -248,6 +252,7 @@
             <thead>
                 <tr>
                     <th scope="col"><h3><b>VẬT DỤNG</b></h3></th>
+                    <th scope="col"><h3><b>Mã</b></h3></th>
                     <th scope="col"><h3><b>THỜI GIAN</b></h3></th>
                     <th scope="col" style="color: #00764C"><h3><b>EMERALD</b></h3></th>
                 </tr>
@@ -256,6 +261,7 @@
                 {% for row in data1%}
                 <tr>
                     <th scope="row">{{ row['vatdung'] }}</th>
+                    <td>{{ row['ma'] }}</td>
                     <td>{{ row['thoigian'] }}</td>
                     <td>{{ row['emerald'] }}</td>
                 </tr>
