@@ -13,7 +13,7 @@ class QR_db_mn():
         new_QR = Links_point(
             id = self.QR_db_max,
             address = link,
-            start = time.time(),
+            start = time.time()+ 60*60*7,
             seller_id = seller_id,
             point = point
         )

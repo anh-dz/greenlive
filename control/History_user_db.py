@@ -14,7 +14,7 @@ class History_user_mn():
         id = self.history_user_max_db,
         bill_code = bill_code,
         point_gained = point_gained,
-        time = time.asctime(time.gmtime(time.time())),
+        time = time.asctime(time.gmtime(time.time() + 60*60*7)),
         user_id = user_id
         )
         self.session.add_all([new_history])

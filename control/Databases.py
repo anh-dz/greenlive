@@ -67,3 +67,16 @@ class Trade_history_user(Base):
     item_id:Mapped[int] = mapped_column(nullable=False)
     time:Mapped[str] = mapped_column(nullable=False)
     user_id:Mapped[int] = mapped_column(nullable=False)
+class Note(Base):
+    __tablename__ = "notes"
+    id:Mapped[int] = mapped_column(primary_key=True)
+    items:Mapped[str] = mapped_column(nullable=False)
+    time:Mapped[str] = mapped_column(nullable=False)
+    location:Mapped[str] = mapped_column(nullable=False)
+    user_id:Mapped[int] = mapped_column(nullable=False)
+class Item(Base):
+    __tablename__ = "items"
+    id:Mapped[int] = mapped_column(primary_key=True)
+    name:Mapped[str] = mapped_column(nullable=False)
+    seller_id:Mapped[int] = mapped_column(nullable=False)
+    price:Mapped[int] = mapped_column(nullable=False)

@@ -1,4 +1,4 @@
-from .Databases import Base, Links_point, Seller
+from .Databases import Base
 from .connect import engine
 import logging, sqlalchemy
 logging.basicConfig()

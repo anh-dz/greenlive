@@ -14,7 +14,7 @@ class Trade_history_user_mn():
         point_paid = point_paid,
         item_name = item_name,
         item_id = item_id,
-        time = time.asctime(time.gmtime(time.time())),
+        time = time.asctime(time.gmtime(time.time() + 60*60*7)),
         user_id = user_id
         )
         self.session.add_all([new_history])

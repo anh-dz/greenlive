@@ -56,9 +56,9 @@ def qr_link_onweb(link, session):
         return "1"
     
 # vi du khi khoi tao login_manager, cho phep nhung login_user, logout_user hoat dong. khởi tạo sớm sớm
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'secret'
-login_manager = login_manager_create(app, Session(engine))
+# app = Flask(__name__)
+# app.config['SECRET_KEY'] = 'secret'
+# login_manager = login_manager_create(app, Session(engine))
 
 # muốn để một trang web cần login required vào thì thêm
 # @login_required
