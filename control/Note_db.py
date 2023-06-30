@@ -2,7 +2,7 @@ from .Databases import Note
 from .connect import engine
 from sqlalchemy.orm import Session
 import time
-from win10toast_click import ToastNotifier
+# from win10toast_click import ToastNotifier
 class Note_db_mn():
     def __init__(self, session) -> None:
         self.session = session
