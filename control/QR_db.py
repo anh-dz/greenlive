@@ -36,7 +36,7 @@ class QR_db_mn():
         self.Thong_ke_db_mnger.qr_expired(a)
     def QR_db_linkpoint_check(self):
         global session
-        min_time = 30#60*60*24
+        min_time = 60*60*24
         statement = select(Links_point).where(Links_point.start <= time.time() - min_time)
         return self.session.scalars(statement)
     def Qr_db_linkpoint_scanned(self, link):
