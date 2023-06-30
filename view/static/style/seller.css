@@ -380,7 +380,6 @@ footer .info{
   font-size: 18px;
 }
 
-
 .SM h1 b{
   color: #527C88;
   font-size: 20px;
@@ -388,23 +387,19 @@ footer .info{
   font-weight: 900;
   line-height: 28px;
   letter-spacing: 0.6px;
-  float:right;
-  margin-top: -70px;  
 }
 
-.SM .home__social {
+.home__social {
   display: flex;
-  float:right;
-  margin-top: -40px;
 }
-.SM .home__social-icon {
+.home__social-icon {
   width: max-content;
   font-size: 24px;
   color: #fff;
   transition: 0.5s;
   margin-left: 10px;
 }
-.SM .home__social-icon:hover {
+.home__social-icon:hover {
   color: #6aa040;
 }
 
@@ -457,7 +452,6 @@ header .menu {
 
 header .menu-icon {
   cursor: pointer;
-  /* display: inline-block; */
   float: right;
   margin-right: 30px;
   padding: 21px;

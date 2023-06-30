@@ -37,11 +37,11 @@ def au2():
         if request.form.get("Hotro_doi") == "Hotro_doi":
             so_tien = int(request.form.get("hotroemerald"))
             global Buyer_manager, Trade_manager
-            if so_tien >= 0 and so_tien <= Buyer_manager.Buyer_db_point(current_user.id):
+            if so_tien > 0 and so_tien <= Buyer_manager.Buyer_db_point(current_user.id):
                 Buyer_manager.Buyer_db_add_point(current_user.id, -1*so_tien)
                 Trade_manager.trade_history_user_add(-1*so_tien, "Hỗ trợ", 9999999, current_user.id, ma="")
             else:
-                flash('Không đủ số điểm để quyên góp', category='error')
+                flash('Không đủ Emerald để quyên góp', category='error')
         elif request.form.get('Logout') == "Logout":
             logout_user()
             return redirect('/login')
