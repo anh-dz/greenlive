@@ -58,6 +58,7 @@ header greenlive a{
   text-decoration: none;
   margin-left: 30px;
   margin-right: 20px;
+  line-height: 60px;
 }
 
 header greenlive a:hover{
@@ -89,6 +90,8 @@ header .nut-dang-nhap  a button{
   font-weight: 500;
   font-size: 16px;
   text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 header .nut-dang-ki a button{
@@ -103,6 +106,8 @@ header .nut-dang-ki a button{
   font-weight: 500;
   font-size: 16px;
   margin-right: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 header .menu-icon .navicon:before,
@@ -130,7 +135,6 @@ header .menu {
 
 header .menu-icon {
   cursor: pointer;
-  /* display: inline-block; */
   float: right;
   margin-right: 30px;
   padding: 21px;
@@ -255,6 +259,7 @@ footer .info{
   font-size: 18px;
 }
 
+
 .SM h1 b{
   color: #527C88;
   font-size: 20px;
@@ -262,19 +267,23 @@ footer .info{
   font-weight: 900;
   line-height: 28px;
   letter-spacing: 0.6px;
+  float:right;
+  margin-top: -70px;  
 }
 
-.home__social {
+.SM .home__social {
   display: flex;
+  float:right;
+  margin-top: -40px;
 }
-.home__social-icon {
+.SM .home__social-icon {
   width: max-content;
   font-size: 24px;
   color: #fff;
   transition: 0.5s;
   margin-left: 10px;
 }
-.home__social-icon:hover {
+.SM .home__social-icon:hover {
   color: #6aa040;
 }
 
@@ -307,11 +316,6 @@ header li a {
   margin-left: 10px;
 }
 
-header li a:hover,
-header .menu-btn:hover {
-  background-color: #f4f4f4;  
-}
-
 header .logo {
   display: block;
   float: left;
@@ -332,7 +336,6 @@ header .menu {
 
 header .menu-icon {
   cursor: pointer;
-  /* display: inline-block; */
   float: right;
   margin-right: 30px;
   padding: 21px;

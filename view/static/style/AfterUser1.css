@@ -298,63 +298,68 @@ h2 .diem{
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     line-height: 20px;
-}
-
-footer {
+  }
+  
+  footer {
     background-color: #201c1c;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-footer .info{
+  }
+  footer .info{
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-}
-
-.contact_us h1 b{
+  }
+  
+  .contact_us h1 b{
     font-family: 'Open Sans', sans-serif;
     color: #fff;
     font-weight: 900;
     font-size: 32px;
-}
-
-.contact_us h3 {
+  }
+  
+  .contact_us h3 {
     font-family: 'Open Sans', sans-serif;
     color: white;
     font-weight: 10; 
     font-size: 18px;
-}
-
-.SM h1 b{
+  }
+  
+  
+  .SM h1 b{
     color: #527C88;
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 900;
     line-height: 28px;
     letter-spacing: 0.6px;
-}
-
-.home__social {
+    float:right;
+    margin-top: -70px;  
+  }
+  
+  .SM .home__social {
     display: flex;
-}
-.home__social-icon {
+    float:right;
+    margin-top: -40px;
+  }
+  .SM .home__social-icon {
     width: max-content;
     font-size: 24px;
     color: #fff;
     transition: 0.5s;
     margin-left: 10px;
-}
-.home__social-icon:hover {
+  }
+  .SM .home__social-icon:hover {
     color: #6aa040;
-}
-
-.end {
+  }
+  
+  .end {
     color:white;
     text-align:center;
     font-size: 10px;
-}
+  }
 
 header {
     background-color: #fff;

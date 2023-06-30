@@ -20,6 +20,7 @@ class Thong_ke(Base):
     QR_created:Mapped[int] = mapped_column(nullable=False)
     QR_scanned:Mapped[int] = mapped_column(nullable=False)
     QR_active:Mapped[int] = mapped_column(nullable=False)
+    bill_made:Mapped[int] = mapped_column(nullable=False)
     def __repr__(self):
         return f"ID: {self.id} QR created: {self.QR_created} QR scanned: {self.QR_scanned} QR active: {self.QR_active}"
     

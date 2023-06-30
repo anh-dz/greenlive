@@ -304,6 +304,7 @@ footer .info{
   font-size: 18px;
 }
 
+
 .SM h1 b{
   color: #527C88;
   font-size: 20px;
@@ -311,19 +312,23 @@ footer .info{
   font-weight: 900;
   line-height: 28px;
   letter-spacing: 0.6px;
+  float:right;
+  margin-top: -70px;  
 }
 
-.home__social {
+.SM .home__social {
   display: flex;
+  float:right;
+  margin-top: -40px;
 }
-.home__social-icon {
+.SM .home__social-icon {
   width: max-content;
   font-size: 24px;
   color: #fff;
   transition: 0.5s;
   margin-left: 10px;
 }
-.home__social-icon:hover {
+.SM .home__social-icon:hover {
   color: #6aa040;
 }
 
