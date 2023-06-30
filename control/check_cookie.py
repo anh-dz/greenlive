@@ -51,9 +51,6 @@ def qr_link_onweb(link, session):
             History_user_manager.history_user_add(link_c.point, "SAMPLEBILLCODE", current_user.id)
             Notifi_db_manager.Notifi_db_add(f"Bạn vừa scan thành công {link_c.point}", current_user.id)
             Notifi_db_manager.Notifi_db_add(f"Mã QR của bạn đã được scan", link_c.seller_id)
-            return "1"
-    else:
-        return "1"
     
 # vi du khi khoi tao login_manager, cho phep nhung login_user, logout_user hoat dong. khởi tạo sớm sớm
 # app = Flask(__name__)

@@ -25,4 +25,8 @@ def au1():
             location = request.form.get('location')
             item_manager.add_item(name = location, ma = ma, giam = phantrammagiamgia, price=gia)
     return render_template('seller.html', qr_created = thongke.QR_created, qr_scanned = thongke.QR_scanned, qr_active = thongke.QR_active)
-    return render_template("seller.html")
+@seller.route('/qr/<name>')
+@login_required
+def qr(name):
+    qr_link_onweb("localhost:5000" + request.path, Session(engine))
+    return redirect('/afteruser1')
