@@ -12,7 +12,8 @@ def au1():
             tendonhang = request.form.get('tendonhang')
             madonhang = request.form.get('madonhang')
             nhapdiem = request.form.get('nhapdiem')
-            maker = QR_maker(Session(engine), "control/QR/", "localhost:5000/qr/")
+            # maker = QR_maker(Session(engine), "control/QR/", "localhost:5000/qr/")
+            maker = QR_maker(Session(engine), "control/QR/", "20.205.15.33/qr/")
             maker.QR_full_make(seller_id = 1, point = nhapdiem, mdh = madonhang)
             data = {
                 'img' : maker.getname()
@@ -28,5 +29,6 @@ def au1():
 @seller.route('/qr/<name>')
 @login_required
 def qr(name):
-    qr_link_onweb("localhost:5000" + request.path, Session(engine))
+    # qr_link_onweb("localhost:5000" + request.path, Session(engine))
+    qr_link_onweb("20.205.15.33" + request.path, Session(engine))
     return redirect('/afteruser1')
