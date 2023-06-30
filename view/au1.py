@@ -74,6 +74,8 @@ def au1():
 @afteruser1.route('/diem')
 @login_required
 def api_diem():
+    qr_db_manager = QR_db_mn(Session(engine))
+    qr_db_manager.QR_db_linkpoint_remove(qr_db_manager.QR_db_linkpoint_check())
     buyer_manager = Buyer_db_manage(Session(engine))
     dictionary_to_return = {
         'so_diem' : buyer_manager.Buyer_db_point(current_user.id)
