@@ -29,7 +29,7 @@ def user_login(username, password):
     mng = User_db_manage(Session(engine))
     user = mng.User_db_get_user(username, password)
     if user is not None:
-        login_user(user)
+        login_user(user, remember=True)
         return str(1)
     else:
         return str(0)
@@ -51,28 +51,25 @@ def qr_link_onweb(link, session):
             History_user_manager.history_user_add(link_c.point, "SAMPLEBILLCODE", current_user.id)
             Notifi_db_manager.Notifi_db_add(f"Bạn vừa scan thành công {link_c.point}", current_user.id)
             Notifi_db_manager.Notifi_db_add(f"Mã QR của bạn đã được scan", link_c.seller_id)
-            return "1"
-    else:
-        return "1"
     
 # vi du khi khoi tao login_manager, cho phep nhung login_user, logout_user hoat dong. khởi tạo sớm sớm
-app = Flask(__name__)
-app.config['SECRET_KEY'] = 'secret'
-login_manager = login_manager_create(app, Session(engine))
+# app = Flask(__name__)
+# app.config['SECRET_KEY'] = 'secret'
+# login_manager = login_manager_create(app, Session(engine))
 
 # muốn để một trang web cần login required vào thì thêm
 # @login_required
 # vào trước @app.route()
-@app.route('/login')
-def log_in():
-    rs = user_login("katori", "2")
-    return rs
-@app.route('/logout')
-def log_out():
-    user_logout()
-    return redirect('/')
-@app.route('/qr/<name>')
-@login_required
-def hetcuu(name):
-    return qr_link_onweb("localhost:5000/qr/" + name, Session(engine))
-app.run()
+# @app.route('/login')
+# def log_in():
+#     rs = user_login("katori", "2")
+#     return rs
+# @app.route('/logout')
+# def log_out():
+#     user_logout()
+#     return redirect('/')
+# @app.route('/qr/<name>')
+# @login_required
+# def hetcuu(name):
+#     return qr_link_onweb("localhost:5000/qr/" + name, Session(engine))
+# app.run()

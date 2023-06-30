@@ -5,10 +5,18 @@
 {%block nutHeader%}
             <i class="fa-solid fa-bell"></i>
             <li class="nut-tkct">
-                <a href="#">
+                <a href="afteruser1">
                     <button class=”myButton”>Tài khoản của tôi</button>
                 </a>
             </li>
+            </li>
+            <form method = "POST">
+            <li class="nut-DX">
+                <a href="afteruser1">
+                    <button class=”myButton” name = "Logout" value = "Logout">Đăng xuất</button>
+                </a>
+            </li>  
+            </form>
 {%endblock%}
 
 {% block container %}
@@ -20,7 +28,7 @@
     <br><br><br><br><br>
     <div class="container">
         <h1>
-            <b>Chào mừng <span id = "user">USER</span>!
+            <b>Chào mừng {{ user }}!
             <div class="emer" style="float:right; font-size: 25px; ">
                 Số <div class="emerald" style="color:#00764C; display: inline; ">Emerald</div> hiện tại: <span style="color:#00764C" id = "sodiem"></span>
             </div>
@@ -54,11 +62,11 @@
 
                                 <div class="col-md-4 mb-3">
                                     <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://www.dongyvietnam.org/wp-content/uploads/2020/11/thuoc-xo-3.jpeg">
+                                        <img class="img-fluid" alt="100%x280" src="https://www.dongyvietnam.org/wp-content/uploads/2020/11/thuoc-xo-3.jpeg" >
                                         <div class="card-body">
                                             <h4 class="card-title">Thuốc xổ</h4>
-                                            <p class="card-text">Happy Market<br>GIÚP BẠN ĐI VỆ SINH DỄ HÀNG HƠN<br>Địa điểm: Số 4, đường Trần Hưng Đạo</p>
-                                            <money><br><b style="color:#00764C; font-size: 20px;">E 1290</b></money>
+                                            <p class="card-text">Happy Market<br><Br>GIÚP BẠN ĐI VỆ SINH DỄ HÀNG HƠN<br><Br>Địa điểm: Số 4, đường Trần Hưng Đạo</p>
+                                            <money><br><b style="color:#00764C; font-size: 20px;">E 6156500</b></money>
                                             <button> 
                                                 Còn hàng
                                             </button>
@@ -71,7 +79,7 @@
                                         <img class="img-fluid" alt="100%x280" src="https://baobithucphamre.com/wp-content/uploads/2017/09/gang-tay-nilon-dung-mot-lan.jpg">
                                         <div class="card-body">
                                             <h4 class="card-title">Găng tay tiện lợi </h4>
-                                            <p class="card-text">HAPPY MARKET<br> THUẬN TIỆN SỬ DỤNG<br>Địa điểm: Số 4 đường Trần Hưng Đạo</p>
+                                            <p class="card-text">HAPPY MARKET<br><br>THUẬN TIỆN SỬ DỤNG<br><br>Địa điểm: Số 4 đường Trần Hưng Đạo</p>
                                             <money><br><b style="color:#00764C; font-size: 20px;">E 990</b></money>
                                             <button> 
                                                 Còn hàng
@@ -84,7 +92,7 @@
                                         <img class="img-fluid" alt="100%x280" src="https://chiaki.vn/upload/product/2022/03/622844c717abc-09032022131015.jpg">
                                         <div class="card-body">
                                             <h4 class="card-title">Bàn chải điện</h4>
-                                            <p class="card-text">HAPPY MARKET<br>DỄ DÀNG SỬ DỤNG<br>Địa điểm: Số 4 đường Trần Hưng Đạo</p>
+                                            <p class="card-text">HAPPY MARKET<br><br>DỄ DÀNG SỬ DỤNG<br><br>Địa điểm: Số 4 đường Trần Hưng Đạo</p>
                                             <money><br><b style="color:#00764C; font-size: 20px;">E 13980</b></money>
                                             <button> 
                                                 Còn hàng
@@ -100,68 +108,41 @@
 
                                 <div class="col-md-4 mb-3">
                                     <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532771098148-525cefe10c23?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=3f317c1f7a16116dec454fbc267dd8e4">
+                                        <img class="img-fluid" alt="100%x280" src="https://cf.shopee.vn/file/f570a9945b16400dd37058f81596fdbf">
                                         <div class="card-body">
-                                            <h4 class="card-title">Special title treatment</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
+                                            <h4 class="card-title">Áo hoodie cặp đôi</h4>
+                                            <p class="card-text">BigC<br><br>PHÙ HỢP VỚI GIỚI TRẺ, DÀNH CHO NHỮNG CẶP ĐÔI ĐANG YÊU NHAU<br><br>Địa chỉ:222 Đ. Trần Duy Hưng</p>
+                                            <money><br><b style="color:#00764C; font-size: 20px;">E 13980</b></money>
+                                            <button> 
+                                                Còn hàng
+                                            </button>
                                         </div>
 
                                     </div>
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532715088550-62f09305f765?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ebadb044b374504ef8e81bdec4d0e840">
+                                        <img class="img-fluid" alt="100%x280" src="https://afamilycdn.com/150157425591193600/2020/5/21/-15900308765461499704399.jpg">
                                         <div class="card-body">
-                                            <h4 class="card-title">Special title treatment</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
+                                            <h4 class="card-title">Hộp trang điểm</h4>
+                                            <p class="card-text">Sammi Mart <br><br>DÀNH CHO NHỮNG NGƯỜI ƯA THÍCH VẺ ĐẸP HOÀN MỸ<br><br>Địa chỉ: số 43 P. Đặng Văn Ngữ </p>
+                                            <money><br><b style="color:#00764C; font-size: 20px;">E 13980</b></money>
+                                            <button> 
+                                                Còn hàng
+                                            </button>
                                         </div>
-                                    </div>
+                                        </div>
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=0754ab085804ae8a3b562548e6b4aa2e">
+                                        <img class="img-fluid" alt="100%x280" src="https://cdn.shopify.com/s/files/1/0011/0162/7439/products/iPhone14ProMax_DeepPurple_bb227bb9-44d2-48fd-83e6-37176aa70d2e_1200x.png?v=1668771881">
                                         <div class="card-body">
-                                            <h4 class="card-title">Special title treatment</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row">
-
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=ee8417f0ea2a50d53a12665820b54e23">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Special title treatment</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532777946373-b6783242f211?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=8ac55cf3a68785643998730839663129">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Special title treatment</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1532763303805-529d595877c5?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=5ee4fd5d19b40f93eadb21871757eda6">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Special title treatment</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                            <h4 class="card-title">Iphone 14 pro max</h4>
+                                            <p class="card-text">Thế giới di động <br><br> THỆ HỆ ĐIỆN THOẠI KIẾN TẠO TƯƠNG LAI <br><br> Địa chỉ: 312 Đường Trần Đại Nghĩa</p>
+                                            <money><br><b style="color:#00764C; font-size: 20px;">E 13980</b></money>
+                                            <button> 
+                                                Còn hàng
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -189,7 +170,7 @@
             <thead>
                 <tr>
                     <th scope="col"><h3><b>CỬA HÀNG</b></h3></th>
-                    <th scope="col"><h3><b>SỐ LƯỢNG</b></h3></th>
+                    <!-- <th scope="col"><h3><b>ID MÃ</b></h3></th> -->
                     <th scope="col"><h3><b>GIẢM GIÁ</b></h3></th>
                     <th scope="col" style="color: #00764C"><h3><b>EMERALD</b></h3></th>
                     <th scope="col"><h3><b style="color: red;">ĐỔI</b></h3></th>
@@ -197,15 +178,17 @@
             </thead>
             <tbody>
                 {% for row in data %}
+                <form method = "post" id = "form{{ loop.index }}">
                 <tr>
-                    <td><b>{{ row['cuahang'] }}</b></td>
-                    <td>{{ row['soluong'] }}</td>
-                    <td contenteditable="true">{{ row['giamgia']}}</td>
-                    <td contenteditable="true">{{ row['emerald']}}</td>
+                    <td><b name = "dt1">{{ row['cuahang'] }}</b></td>
+                    <!-- <td name = "dt2">{{ row['item_id'] }}</td> -->
+                    <td name = "dt3">{{ row['giamgia'] }}</td>
+                    <td name = "dt4">{{ row['emerald'] }}</td>
                     <td>
-                            <button class="myButton2" onclick="deleteRow(this)"><b>Đổi</b></button>
+                        <button type = "submit" class="myButton2" name = "button{{ loop.index }}" value="Button_doi" ><b>Đổi</b></button>
                     </tr>
                 </tr>
+                </form>
                 {% endfor %}
             </tbody>
         </table>
@@ -216,6 +199,7 @@
         <br><br>
         <h5>
             <b>
+                <form method = "post">
                 <div class="input-group">
                     <div class="nhap-so">
                         Nhập số
@@ -224,13 +208,14 @@
                         </div>
                     muốn hỗ trợ:  
                     </div>                    
-                    <input type="text" class="form-control form-control-lg bg-light fs-6">
+                    <input type="text" name ="hotroemerald" id = "hotroemerald" class="form-control form-control-lg bg-light fs-6">
                     <div class="doi">
                         <a href="#">
-                            <button class=”myButton2”><b>Đổi</b></button>
+                            <button class=”myButton2” name = "Hotro_doi" value="Hotro_doi"><b>Đổi</b></button>
                         </a> 
                     </div>
                 </div>
+                </form>
             </b>  
             <br><br>
                 <i><b><u>Quy đổi:</u></b></i> <i style="font-size:16px;">1k VND = 100 
@@ -242,76 +227,37 @@
         <i>“Con người không thể sống yêu thương nếu thiếu trái tim”</i>
         <br><br><br><br>
         <h3><b>👉 Thống kê đổi điểm</b></h3>
-        <div class="table1">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col"><h3><b>VẬT DỤNG</b></h3></th>
-                        <th scope="col"><h3><b>THỜI GIAN</b></h3></th>
-                        <th scope="col" style="color: #00764C"><h3><b>EMERALD</b></h3></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Mã giảm giá cửa hàng tiện lợi CircleK</th>
-                        <td>16h 28/3/2023</td>
-                        <td>-100</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Mã giảm giá bách hoá Trâu Quỳ</th>
-                        <td>8h 30/4/2023</td>
-                        <td>-150</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Tăm bông</th>
-                        <td>6h30 1/5/2023</td>
-                        <td>-1200</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
         <br>
-
-        <h3><b>👉 Thống kê đổi điểm</b></h3>
+        <div class="table1">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"><h3><b>VẬT DỤNG</b></h3></th>
+                    <th scope="col"><h3><b>Mã</b></h3></th>
+                    <th scope="col"><h3><b>THỜI GIAN</b></h3></th>
+                    <th scope="col" style="color: #00764C"><h3><b>EMERALD</b></h3></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data1%}
+                <tr>
+                    <th scope="row">{{ row['vatdung'] }}</th>
+                    <td>{{ row['ma'] }}</td>
+                    <td>{{ row['thoigian'] }}</td>
+                    <td>{{ row['emerald'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
 
         <br><br>
-
-        <div class="table2">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col"><h3><b>VẬT DỤNG</b></h3></th>
-                        <th scope="col"><h3><b>THỜI GIAN</b></h3></th>
-                        <th scope="col" style="color: #00764C"><h3><b>EMERALD</b></h3></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Mã giảm giá cửa hàng tiện lợi CircleK</th>
-                        <td>16h 28/3/2023</td>
-                        <td>-100</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Mã giảm giá bách hoá Trâu Quỳ</th>
-                        <td>8h 30/4/2023</td>
-                        <td>-150</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Tăm bông</th>
-                        <td>6h30 1/5/2023</td>
-                        <td>-1200</td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
-
-        <br><br>
 
         <h3><b>👉 Mã giới thiệu bạn bè: JICJKDLS</b></h3>
 
         <br><br><br>
 
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="static/script/au1.js"></script>
 {% endblock %}

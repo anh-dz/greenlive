@@ -9,6 +9,14 @@
                     <button class=”myButton” >Đổi điểm</button>
                 </a>
             </li>
+        </li>
+        <form method="post">
+        <li class="nut-DX">
+            <a href="afteruser1">
+                <button class=”myButton” name = "Logout" value = "Logout">Đăng xuất</button>
+            </a>
+        </li>
+        </form>
 {%endblock%}
 
 {% block container %}
@@ -18,7 +26,7 @@
 
         <h1>
             <b>
-                Chào mừng User!
+                Chào mừng {{ user }}!
             </b>
         </h1>
 
@@ -38,6 +46,7 @@
             <thead>
                 <tr>
                     <th scope="col"><h3><b>VẬT DỤNG</b></h3></th>
+                    <th scope="col"><h3><b>Mã</b></h3></th>
                     <th scope="col"><h3><b>THỜI GIAN</b></h3></th>
                     <th scope="col" style="color: #00764C"><h3><b>EMERALD</b></h3></th>
                 </tr>
@@ -46,6 +55,7 @@
                 {% for row in data1%}
                 <tr>
                     <th scope="row">{{ row['vatdung'] }}</th>
+                    <td>{{ row['ma'] }}</td>
                     <td>{{ row['thoigian'] }}</td>
                     <td>{{ row['emerald'] }}</td>
                 </tr>
@@ -87,10 +97,10 @@
         <!-- ! nhắc nhở mua hàng -->
         <div class="nhac-nho">
             <h2>👉 Nhắc nhở mua hàng
-                <button class="btn text-success my-2 table-add " onclick="addRow()">
+                <button type="submit" class="btn text-success my-2 table-add " onclick="addRow()">
                     <i class="fa-solid fa-plus"></i>
                 </button>
-                <button class="btn text-success my-2 table-safe ">
+                <button type="submit" class="btn text-success my-2 table-safe ">
                     <i class="fa-regular fa-floppy-disk"></i>
                 </button>
             </h2>
@@ -113,7 +123,7 @@
                     <td contenteditable="true">{{ row['thoigian'] }}</td>
                     <td contenteditable="true">{{ row['diadiem']}}</td>
                     <td> 
-                        <button class="btn text-success my-2 table-delete" onclick="deleteRow(this)">
+                        <button class="btn text-success my-2 table-delete" onclick="deleteRow(this)" value="{{ row.id }}">
                             <i class="fa-solid fa-trash"></i>
                         </button>
                     </td>

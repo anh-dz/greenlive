@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>{% block title %}{%endblock%}</title>
+    <link rel="icon" type="image/png" href="static/img/icon.png">
     <link rel="stylesheet" href="static/style/{% block hetcuu %}{% endblock %}">
     <link rel="stylesheet" href="static/style/{% block css %}{% endblock %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -33,6 +34,7 @@
             </li> -->
         </ul>
     </header>
+    <br><br><br>
     {% with messages = get_flashed_messages(with_categories=true) %} {% if
         messages %} {% for category, message in messages %} {% if category ==
         'error' %}
@@ -68,7 +70,7 @@
             </h1>
         </div>
         <div class="home__social">
-            <a href="https://www.facebook.com/minkalexvina/" target="_blank" class="home__social-icon"><i
+            <a href="https://www.facebook.com/groups/218015441196731" target="_blank" class="home__social-icon"><i
                     class="fab fa-facebook"></i></a>
             <a href="https://www.instagram.com/minkalexvina/" target="_blank" class="home__social-icon"><i
                     class="fab fa-instagram"></i></a>

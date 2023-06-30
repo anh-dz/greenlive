@@ -59,16 +59,16 @@
                             </div> 
 
                             <div>
-                                <input type="text" placeholder="Nhập điểm" name="nhapdiem" id="nhapdiem" required />
+                                <input type="text" placeholder="Nhập Emerald" name="nhapdiem" id="nhapdiem" required />
                                 <div class="note" style="display: inline; color: red;">*</div>
                             </div> 
 
                             <div>
-                                <input type="text" placeholder="Ghi chú" name="ghichu" id="ghichu" required />
+                                <input type="text" placeholder="Ghi chú" name="ghichu" id="ghichu" />
                             </div>
 
                             <div>
-                                <button class="btn " type="submit" style="background:#00764C; color:white">
+                                <button class="btn" type="submit" value="mdh" name="action1" style="background:#00764C; color:white">
                                     TẠO
                                 </button>
                             </div>
@@ -108,14 +108,19 @@
                     <div class="modal-body">
                         <form method="post">
                             <div>
+                                <input type="text" placeholder="Location" name="location" id="location" required />
+                                <div class="note" style="display: inline; color: red;">*</div>
+                            </div>
+                            
+                            <div>
                                 <input type="text" placeholder="Mã" name="ma" id="ma" required/>
                                 <div class="note" style="display: inline; color: red;">*</div>
                             </div>
 
-                            <div>
+                            <!-- <div>
                                 <input type="text" placeholder="Số lượng mã" name="soluongma" id="soluongma" required />
                                 <div class="note" style="display: inline; color: red;">*</div>
-                            </div>
+                            </div> -->
 
                             <div>
                                 <input type="text" placeholder="Phần trăm giảm giá" name="phantramgiamgia" id="phantramgiamgia" required />
@@ -123,12 +128,17 @@
                             </div>
 
                             <div>
-                                <input type="text" placeholder="Ghi chú" name="ghichu" id="ghichu" required />
+                                <input type="text" placeholder="Emerald" name="emerald" id="emerald" required />
+                                <div class="note" style="display: inline; color: red;">*</div>
+                            </div>
+
+                            <div>
+                                <input type="text" placeholder="Ghi chú" name="ghichu" id="ghichu" />
                             </div>
 
 
                             <div>
-                                <button class="btn " type="submit" style="background:#00764C; color:white">
+                                <button class="btn " type="submit" value="magiamgia" name="action2" style="background:#00764C; color:white">
                                     TẠO
                                 </button>
                             </div>
@@ -193,7 +203,7 @@
                             </div>
 
                             <div>
-                                <input type="text" placeholder="Ghi chú" required />
+                                <input type="text" placeholder="Ghi chú" />
                             </div>
 
                             <div>
@@ -240,15 +250,15 @@
             <tbody>
                 <tr>
                     <th scope="row">Số mã đã tạo</th>
-                    <td><span>10</span></td>
+                    <td><span>{{ qr_created }}</span></td>
                 </tr>
                 <tr>
                     <th scope="row">Số mã đã quét</th>
-                    <td><span>20</span></td>
+                    <td><span>{{ qr_scanned }}</span></td>
                 </tr>
                 <tr>
                     <th scope="row">Số mã còn lại</th>
-                    <td><span>5</span></td>
+                    <td><span>{{ qr_active }}</span></td>
                 </tr>
             </tbody>
         </table>
@@ -281,5 +291,7 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="static/script/au1.js"></script>
 <br><br>
 {% endblock %}
