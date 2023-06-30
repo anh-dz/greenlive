@@ -10,6 +10,7 @@ class Links_point(Base):
     start:Mapped[int] = mapped_column(nullable=False)
     seller_id:Mapped[int] = mapped_column(nullable=False)
     point:Mapped[int] = mapped_column(nullable=False)
+    mdh:Mapped[str] = mapped_column(nullable=False)
     def __repr__(self): 
         return f"ID: {self.id} Address: {self.address} Start_time: {self.start}"
 

@@ -33,7 +33,7 @@ class QR_maker():
         link_on_web = self.web_link_qr + link
         self.name = self.save_folder + link + ".png"
         self.QR_make(link_on_web, self.name)
-        self.QR_db_mnger.QR_db_add(link_on_web,seller_id, point)
+        self.QR_db_mnger.QR_db_add(link_on_web,seller_id, point, mdh)
         self.Thong_ke_mnger.qr_created(1)
         self.Seller_db_mnger.Seller_db_add_qrmade(seller_id,1)
     def getname(self):

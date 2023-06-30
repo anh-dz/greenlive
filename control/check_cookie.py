@@ -48,7 +48,7 @@ def qr_link_onweb(link, session):
             Notifi_db_manager = Notifi_db_mn(session)
             Buyer_manager.Buyer_db_add_point(current_user.id,link_c.point)
             Link_point_db_manager.Qr_db_linkpoint_scanned(link_c)
-            History_user_manager.history_user_add(link_c.point, "SAMPLEBILLCODE", current_user.id)
+            History_user_manager.history_user_add(link_c.point, link_c.mdh, current_user.id)
             Notifi_db_manager.Notifi_db_add(f"Bạn vừa scan thành công {link_c.point}", current_user.id)
             Notifi_db_manager.Notifi_db_add(f"Mã QR của bạn đã được scan", link_c.seller_id)
     
