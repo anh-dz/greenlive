@@ -58,9 +58,9 @@ function addRow() {
   vatdungCell.contentEditable = true;
   thoigianCell.contentEditable = true;
   
-  usernameCell.innerHTML = "Bạn cần mua gì?";
-  vatdungCell.innerHTML = "Bạn mua vào thời gian nào?";
-  thoigianCell.innerHTML = "Bạn mua ở cửa hàng nào?"
+  usernameCell.placeholder = "Bạn cần mua gì?";
+  vatdungCell.placeholder = "Bạn mua vào thời gian nào?";
+  thoigianCell.placeholder = "Bạn mua ở cửa hàng nào?"
 }
 
 function copyText() {
