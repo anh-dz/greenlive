@@ -8,7 +8,7 @@ def logme(email, password):
 
     manager = User_db_manage(session)
 
-    user = manager.User_db_get_user(email, password) 
+    user = manager.User_db_get_user(email, password)
     if user is None:
         print("Khong the dang nhap duoc")
         return
