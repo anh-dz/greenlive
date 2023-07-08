@@ -83,20 +83,21 @@ header lienhe{
 }
 
 
-
-header .nut-tkct a button{
-  border-radius: 100px;
-  border: 0px;
-  width: 150px;
-  height: 44px;   
-  background-color: #00764C;
-  font-weight: bolder;
-  color: #fff;font-family: 'Open Sans', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  margin-left: 20px;
-  margin-right: 20px;
+header .nut-tkct a button,
+header .nut-DX form button {
+    border-radius: 100px;
+    border: 0px;
+    width: 150px;
+    height: 44px;   
+    background-color: #00764C;
+    font-weight: bolder;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .table tbody tr td button{
@@ -204,7 +205,7 @@ h5 b .input-group input{
     border: 0px;
     margin-top: -10px;
 }
- 
+
 h5 i b u{
     margin-left: 30px;
     margin-top: 10px;
@@ -225,6 +226,11 @@ h5 i b u{
   }
 }
 @media screen and (max-width: 1000px) {
+  header .nut-tkct a button,
+  header .nut-DX form button {
+      margin-left: 0;
+      margin-right: 0;
+  }
   .menu {
       flex-direction: column;
       align-items: start;
@@ -238,12 +244,6 @@ h5 i b u{
       padding: 0px;
       margin-left: 0px;
   }
-  lienhe {
-      margin-left: 30px;
-      margin-top: 15px;
-      margin-bottom: 15px;
-      align-self: flex-start;
-  }
 }
 
 .row .col-12 .carousel .carousel-inner .carousel-item .row .col-md-4 .card .card-body button{
@@ -252,7 +252,7 @@ h5 i b u{
     border-radius: 10px;
     border-color:#00764C;
     background-color: white;
-    float: right;   
+    float: right;
     color:#00764C;
 }
 
@@ -438,6 +438,28 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
 
+button#copyButton {
+  border: none;
+  background-color: #00764C;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button#copyButton:hover {
+  background-color: #005638;
+}
+
+button#copyButton:active {
+  background-color: #00371C;
+  box-shadow: none;
+}
+
 /* responsive */
 @media screen and (min-width: 1000px) {
   header li {
@@ -465,12 +487,6 @@ header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   .menu li a {
       padding: 0px;
       margin-left: 0px;
-  }
-  lienhe {
-      margin-left: 30px;
-      margin-top: 15px;
-      margin-bottom: 15px;
-      align-self: flex-start;
   }
 }
 

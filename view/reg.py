@@ -11,12 +11,16 @@ def reg():
         password = request.form.get('password')
         password_check = request.form.get('password_check')
         magioithieu = request.form.get('magioithieu')
-        if password != password_check:
+        if len(name)<2:
+            flash('Tên của bạn quá ngắn', category='error')
+        elif '@' not in email:
+            flash('Sai định dạng Email', category='error')
+        elif password != password_check:
             flash('Mật khẩu không trùng nhau', category='error')
-        elif len(password)<=7:
+        elif len(password)<8:
             flash('Mật khẩu quá ngắn', category='error')
         else:
             signup(name, email, password, magioithieu)
-            flash('Đăng kí thành công, vui lòng đặng nhập tài khoản', category='success')
+            flash('Đăng kí thành công, vui lòng đăng nhập tài khoản', category='success')
 
     return render_template("register.html")

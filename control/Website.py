@@ -1,10 +1,10 @@
 from flask import Flask
+from control import running
 import flask
 from sqlalchemy.orm import Session
 from sqlalchemy import select
 from Databases import Links_point
 from connect import engine
-web_main_link = "localhost:5000/"
 session = Session(bind=engine)
 #Do a query searching for link 
 def QR_query(link):
@@ -23,8 +23,7 @@ def QR_link_remove(link):
 web = Flask(__name__)
 @web.route("/qr/<name>/")
 def func(name):
-    global web_main_link
-    link = web_main_link + f"qr/{name}"
+    link = running + f"qr/{name}"
     if QR_link_check(link):
         return  flask.render_template("point.html", status = "Valid")
     else:

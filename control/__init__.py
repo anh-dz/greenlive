@@ -19,3 +19,13 @@ from .QR_maker import *
 # so_diem = get_id()
 # thong_ke_doi_emerald = tkdoidiem
 # lich_su_tich_emerald = tktichdiem
+
+import json
+
+def get():
+  data = open("control/Database/yourhost.json")
+  resp = json.load(data)
+
+  return resp["running"]
+
+running = get()

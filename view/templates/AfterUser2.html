@@ -3,20 +3,17 @@
 {% block css %}AfterUser2.css{%endblock%}
 
 {%block nutHeader%}
-            <i class="fa-solid fa-bell"></i>
-            <li class="nut-tkct">
-                <a href="afteruser1">
-                    <button class=”myButton”>Tài khoản của tôi</button>
-                </a>
-            </li>
-            </li>
-            <form method = "POST">
-            <li class="nut-DX">
-                <a href="afteruser1">
-                    <button class=”myButton” name = "Logout" value = "Logout">Đăng xuất</button>
-                </a>
-            </li>  
-            </form>
+<i class="fa-solid fa-bell"></i>
+<li class="nut-tkct">
+    <a href="afteruser1">
+        <button class="myButton">Tài khoản của tôi</button>
+    </a>
+</li>
+<li class="nut-DX">
+    <form method="post">
+        <button class="myButton" name="Logout" value="Logout">Đăng xuất</button>
+    </form>
+</li>
 {%endblock%}
 
 {% block container %}
@@ -206,8 +203,7 @@
                         <div class="e2" style="color:#00764C; display: inline;">
                             Emerald
                         </div>
-                    muốn hỗ trợ:  
-                    </div>                    
+                    </div>
                     <input type="text" name ="hotroemerald" id = "hotroemerald" class="form-control form-control-lg bg-light fs-6">
                     <div class="doi">
                         <a href="#">
@@ -253,8 +249,10 @@
         <br><br>
         </div>
 
-        <h3><b>👉 Mã giới thiệu bạn bè: JICJKDLS</b></h3>
-
+        <h3>
+            <b>👉 Mã giới thiệu bạn bè: <span id="codeText">CJKJAC816</span></b>
+            <button id="copyButton" onclick="copyText()">COPY</button>
+        </h3>
         <br><br><br>
 
     </div>
