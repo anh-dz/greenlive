@@ -14,7 +14,7 @@ def trade_history():
         vatdung_dict = {'vatdung': Trade_his["ItemName"][i],'ma':Trade_his['ma'][i], 'thoigian': Trade_his["Time"][i] , 'emerald': Trade_his["Emerald"][i]}
         thong_ke_doi_emerald.append(vatdung_dict)
     return thong_ke_doi_emerald
-  
+
 def gain_shop():
     global Gain_manager
     Gain_his = Gain_manager.item_scan()
@@ -35,13 +35,17 @@ def au2():
     a = len(data)
     if request.method == 'POST':
         if request.form.get("Hotro_doi") == "Hotro_doi":
-            so_tien = int(request.form.get("hotroemerald"))
-            global Buyer_manager, Trade_manager
-            if so_tien >= 0 and so_tien <= Buyer_manager.Buyer_db_point(current_user.id):
-                Buyer_manager.Buyer_db_add_point(current_user.id, -1*so_tien)
-                Trade_manager.trade_history_user_add(-1*so_tien, "Hỗ trợ", 9999999, current_user.id, ma="")
+            get_sotien = request.form.get("hotroemerald")
+            if get_sotien.isnumeric():
+                so_tien = int(get_sotien)
+                global Buyer_manager, Trade_manager
+                if so_tien > 0 and so_tien <= Buyer_manager.Buyer_db_point(current_user.id):
+                    Buyer_manager.Buyer_db_add_point(current_user.id, -1*so_tien)
+                    Trade_manager.trade_history_user_add(-1*so_tien, "Hỗ trợ", 9999999, current_user.id, ma="")
+                else:
+                    flash('Không đủ Emerald để quyên góp', category='error')
             else:
-                flash('Không đủ số điểm để quyên góp', category='error')
+                flash('Vui lòng nhập số Emerald để quyên góp', category='error')
         elif request.form.get('Logout') == "Logout":
             logout_user()
             return redirect('/login')

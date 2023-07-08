@@ -8,9 +8,13 @@
   <div style="text-align: center;">
     <img src="data:image/jpeg;base64,{{img}}" style="width: auto">
   </div>
+  <div class="input-group mb-3">
+    <button type="submit" class="btn btn-lg btn-primary w-100 fs-6" style="background-color: #00764C; border: 0px;" onclick="downloadBase64File('{{ img }}', 'image/png', 'greenliveQR.png')">Tải về</button>
+  </div>
 </div>
 <br><br>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="static/script/au1.js"></script>
+<!-- <script src="static/script/au1.js"></script> -->
+<script src="static/script/dl.js"></script>
 {% endblock %}

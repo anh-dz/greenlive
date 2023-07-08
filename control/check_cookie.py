@@ -1,5 +1,5 @@
 from flask import Flask, redirect
-from flask import render_template, make_response, request
+from flask import *
 from flask_login import login_user, login_required, logout_user, current_user
 from .QR_db import QR_db_mn
 from .Buyer_db import Buyer_db_manage
@@ -48,7 +48,10 @@ def qr_link_onweb(link, session):
             Notifi_db_manager = Notifi_db_mn(session)
             Buyer_manager.Buyer_db_add_point(current_user.id,link_c.point)
             Link_point_db_manager.Qr_db_linkpoint_scanned(link_c)
-            History_user_manager.history_user_add(link_c.point, "SAMPLEBILLCODE", current_user.id)
+            History_user_manager.history_user_add(link_c.point, link_c.mdh, current_user.id)
+
+            flash('Bạn vừa scan thành công 💀', category='error')
+
             Notifi_db_manager.Notifi_db_add(f"Bạn vừa scan thành công {link_c.point}", current_user.id)
             Notifi_db_manager.Notifi_db_add(f"Mã QR của bạn đã được scan", link_c.seller_id)
     

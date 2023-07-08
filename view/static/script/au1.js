@@ -63,4 +63,17 @@ function addRow() {
   thoigianCell.innerHTML = "Bạn mua ở cửa hàng nào?"
 }
 
+function copyText() {
+  var codeText = document.getElementById("codeText");
+  var text = codeText.innerText;
+
+  navigator.clipboard.writeText(text)
+    .then(function () {
+      
+    })
+    .catch(function (error) {
+      console.error("Copy failed:", error);
+    });
+}
+
 // https://linuxhint.com/add-row-to-html-table-using-javascript/#:~:text=Use%20the%20following%20syntax%20for,table%20or%20at%20the%20start.

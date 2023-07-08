@@ -1,0 +1,7 @@
+{
+  "running" : "localhost:5000",
+  "all": {
+    "localhost": "127.0.0.1:5000",
+    "sever": "20.205.15.33"
+  }
+}

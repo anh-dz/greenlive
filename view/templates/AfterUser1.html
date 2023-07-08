@@ -3,26 +3,23 @@
 {% block css %}AfterUser1.css{%endblock%}
 
 {%block nutHeader%}
-            <i class="fa-solid fa-bell"></i>
-            <li class="nut-tkct">
-                <a href="afteruser2">
-                    <button class=”myButton” >Đổi điểm</button>
-                </a>
-            </li>
-        </li>
-        <form method="post">
-        <li class="nut-DX">
-            <a href="afteruser1">
-                <button class=”myButton” name = "Logout" value = "Logout">Đăng xuất</button>
-            </a>
-        </li>
-        </form>
+<i class="fa-solid fa-bell"></i>
+<li class="nut-tkct">
+    <a href="afteruser2">
+        <button class="myButton">Đổi điểm</button>
+    </a>
+</li>
+<li class="nut-DX">
+    <form method="post">
+        <button class="myButton" name="Logout" value="Logout">Đăng xuất</button>
+    </form>
+</li>
 {%endblock%}
 
 {% block container %}
     <div class="container">
 
-        <br><br><br><br><br><br>
+        <br><br>
 
         <h1>
             <b>
@@ -34,9 +31,9 @@
 
         <!-- ! thống kê đổi điểm -->
         <h2>
-            👉 <div class="EMERALD">Emerald</div> tích luỹ hiện tại: <span style="color:#00764C" id = "sodiem"></span>
+            👉 <div class="EMERALD" style="display: inline; color:#00764C">Emerald</div> tích luỹ hiện tại: <span style="color:#00764C" id = "sodiem"></span>
         <br> <br>
-            👉 Thống kê đổi <div class="diem">Emerald</div>
+            👉 Thống kê đổi <div class="diem" style="display: inline; color:#00764C">Emerald</div>
         </h2>
 
         <br>
@@ -46,7 +43,7 @@
             <thead>
                 <tr>
                     <th scope="col"><h3><b>VẬT DỤNG</b></h3></th>
-                    <th scope="col"><h3><b>Mã</b></h3></th>
+                    <th scope="col"><h3><b>MÃ</b></h3></th>
                     <th scope="col"><h3><b>THỜI GIAN</b></h3></th>
                     <th scope="col" style="color: #00764C"><h3><b>EMERALD</b></h3></th>
                 </tr>
@@ -67,7 +64,7 @@
 
         <!-- ! lịch sử tích điểm  -->
         <div class="lich-su">
-            <h2>👉 Lịch sử tích <div class="LS-diem">Emerald</div></h2>
+            <h2>👉 Lịch sử tích <div class="LS-diem" style="display: inline; color:#00764C">Emerald</div></h2>
         </div>
 
         <br>

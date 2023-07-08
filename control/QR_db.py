@@ -9,12 +9,13 @@ class QR_db_mn():
         self.session:Session = session
         self.QR_db_max_find()
         self.Thong_ke_db_mnger = Thong_ke_db_mn(Session(engine))
-    def QR_db_add(self, link, seller_id, point):
+    def QR_db_add(self, link, seller_id, point, mdh):
         new_QR = Links_point(
             address = link,
             start = time.time(),
             seller_id = seller_id,
-            point = point
+            point = point,
+            mdh = mdh
         )
         self.session.add(new_QR)
         self.session.commit()

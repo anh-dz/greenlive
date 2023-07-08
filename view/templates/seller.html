@@ -17,7 +17,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 {% block container %}
-<br><br><br><br><br>
+<br><br>
 <div class="container">
     <h1>
         <b>Chào mừng USER!
@@ -108,7 +108,7 @@
                     <div class="modal-body">
                         <form method="post">
                             <div>
-                                <input type="text" placeholder="Location" name="location" id="location" required />
+                                <input type="text" placeholder="Địa điểm" name="location" id="location" required />
                                 <div class="note" style="display: inline; color: red;">*</div>
                             </div>
                             
@@ -234,7 +234,7 @@
     <br>
 
     <div class="don-hang">
-        <h5>Số đơn hàng đã tạo: <span>50</span></h5>
+        <h5>Số đơn hàng đã tạo: <span>{{ bill_made }}</span></h5>
     </div>        
 
     <br>

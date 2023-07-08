@@ -13,11 +13,12 @@ def au1():
             madonhang = request.form.get('madonhang')
             nhapdiem = request.form.get('nhapdiem')
             # maker = QR_maker(Session(engine), "control/QR/", "localhost:5000/qr/")
-            maker = QR_maker(Session(engine), "control/QR/", "20.205.15.33/qr/")
+            maker = QR_maker(Session(engine), "control/QR/", f"{running}/qr/")
             maker.QR_full_make(seller_id = 1, point = nhapdiem, mdh = madonhang)
             data = {
                 'img' : maker.getname()
             }
+            thong_ke_manager.bill_add()
             return redirect(url_for('thanhcong.tc', **data))
         elif  request.form.get('action2') == 'magiamgia':
             ma = request.form.get('ma')
@@ -25,10 +26,10 @@ def au1():
             gia = request.form.get('emerald')
             location = request.form.get('location')
             item_manager.add_item(name = location, ma = ma, giam = phantrammagiamgia, price=gia)
-    return render_template('seller.html', qr_created = thongke.QR_created, qr_scanned = thongke.QR_scanned, qr_active = thongke.QR_active)
+    return render_template('seller.html', qr_created = thongke.QR_created, qr_scanned = thongke.QR_scanned, qr_active = thongke.QR_active, bill_made = thongke.bill_made)
 @seller.route('/qr/<name>')
 @login_required
 def qr(name):
     # qr_link_onweb("localhost:5000" + request.path, Session(engine))
-    qr_link_onweb("20.205.15.33" + request.path, Session(engine))
+    qr_link_onweb(running + request.path, Session(engine))
     return redirect('/afteruser1')

@@ -452,7 +452,6 @@ header .menu {
 
 header .menu-icon {
   cursor: pointer;
-  /* display: inline-block; */
   float: right;
   margin-right: 30px;
   padding: 21px;
